@@ -1,13 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Landing Page</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <header class="header">
+      <div class="header__logo">Логотип</div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__list_item">
+            <a class="header__list_link" href="#">Пункт 1</a>
+          </li>
+          <li class="header__list_item">
+            <a class="header__list_link" href="#">Пункт 2</a>
+          </li>
+          <li class="header__list_item">
+            <a class="header__list_link" href="#">Пункт 3</a>
+          </li>
+          <li class="header__list_item">
+            <a class="header__list_link" href="#">Пункт 4</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="burger-menu">Меню</div>
+    </header>
+    <main class="content">
+      <section class="content__block">
+        <h2 class="content__block_title">Наши работы</h2>
+        <div class="feedback">
+          <div class="container">
+            <div
+              class="feedback-slider"
+              style="position: relative; height: 400px">
+              <button class="main-slider-btn main-prev-btn">
+                <img src="./src/assets/img/left-arr.png" alt="left" /></button
+              >'
+              <button class="main-slider-btn main-next-btn">
+                <img src="./src/assets/img/right-arr.png" alt="right" />
+              </button>
+              <div class="feedback-slider-item">
+                <div class="col-sm-5">
+                  <div class="feedback-block">
+                    <!-- <button class="button button-order button-design">
+                      Хочу так же
+                    </button> -->
+                  </div>
+                </div>
+                <div class="col-sm-5 col-sm-offset-1">
+                  <p class="feedback-heading">Арктический блонд</p>
+                  <img src="./public/ блонд.webp" alt="" />
+                  <p class="feedback-text"></p>
+                  <p class="feedback-signature">
+                    <!-- <span>Олег Петров,</span> д. Месягутово -->
+                  </p>
+                </div>
+              </div>
+              <div class="feedback-slider-item">
+                <div class="col-sm-5">
+                  <div class="feedback-block">
+                    <!-- <button class="button button-order button-design">
+                      Хочу так же
+                    </button> -->
+                  </div>
+                </div>
+                <div class="col-sm-5 col-sm-offset-1">
+                  <p class="feedback-heading">Маникюр с покрытием</p>
+                  <img src="./public/ маник.webp" alt="" />
+                  <p class="feedback-text"></p>
+                  <p class="feedback-signature">
+                    <!-- <span>Ирина Антонова,</span> г. Кисловодск -->
+                  </p>
+                </div>
+              </div>
+              <div class="feedback-slider-item">
+                <div class="col-sm-5">
+                  <div class="feedback-block">
+                    <!-- <button class="button button-order button-design">
+                      Хочу так же
+                    </button> -->
+                  </div>
+                </div>
+                <div class="col-sm-5 col-sm-offset-1">
+                  <p class="feedback-heading">Укладка от топ-стилиста</p>
+                  <img src="./public/ укл.webp" alt="" />
+                  <p class="feedback-text"></p>
+                  <p class="feedback-signature">
+                    <!-- <span>Нарек Маргарян,</span> г. Великие Луки -->
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <figure>
+          <img src="image1.jpg" alt="Описание изображения 1" />
+          <figcaption>Подпись к изображению 1</figcaption>
+        </figure>
+        <figure>
+          <img src="image2.jpg" alt="Описание изображения 2" />
+          <figcaption>Подпись к изображению 2</figcaption>
+        </figure>
+        <figure>
+          <img src="image3.jpg" alt="Описание изображения 3" />
+          <figcaption>Подпись к изображению 3</figcaption>
+        </figure> -->
+      </section>
+      <section class="content__block">
+        <h2 class="content__block_title">О наc</h2>
+        <p class="content__block_desk">
+          Добро пожаловать в нашу галерею фотографий! Здесь вы найдете красивые
+          и уникальные снимки, сделанные нашими талантливыми фотографами. Мы
+          постоянно обновляем нашу коллекцию, так что заглядывайте сюда чаще,
+          чтобы не пропустить новые работы. Надеемся, что вам понравятся наши
+          фотографии!
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__contact-info">
+        <a class="footer__contact-link">Phone: 123-456-7890</a>
+        <p class="footer__contact-address">
+          Address: 123 Street, City, Country
+        </p>
+        <p>Follow us on social media:</p>
+        <a class="footer__contact-socialnet" href="#">Facebook</a><br />
+        <a class="footer__contact-socialnet" href="#">Twitter</a><br />
+        <a class="footer__contact-socialnet" href="#">Instagram</a>
+      </div>
+    </footer>
+
+    <!-- Остальной контент лендинга -->
+    <script src="./main.ts"></script>
+    <script src="./modal.ts"></script>
   </body>
 </html>
