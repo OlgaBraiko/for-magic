@@ -1,96 +1,360 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.left-column,
+.right-column {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card {
-  padding: 2em;
+.contact-info {
+  margin-right: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+.social-media-icons {
+  /* Стили для иконок социальных сетей */
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.menu ul {
+  list-style-type: none;
+  display: flex; /* Добавляем flex для пунктов меню */
+}
+
+.menu li {
+  margin: 0 50px;
+}
+
+.menu li:hover {
+  color: red;
+}
+
+/* dropdown */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: inline-block;
+  position: relative;
+  font-weight: 500;
+}
+
+.menu li:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff; /* Белый фон */
+  border: none;
+  padding: 10px;
+  z-index: 1000; /* Устанавливаем высокий z-index */
+}
+
+.dropdown a {
+  display: block;
+  width: auto; /* Подстраивается под ширину контента */
+  text-decoration: none;
+  color: grey; /* Цвет ссылок */
+  padding: 5px 0;
+}
+.dropdown a:hover {
+  color: #000;
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+}
+
+.gallery button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 10px;
+}
+
+.gallery .prev {
+  left: 10px;
+}
+
+.gallery .next {
+  right: 10px;
+}
+
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 228, 225, 0.5); /* Нежный цвет фона */
+}
+/* отцентровать окно попап */
+
+.modal-content {
+  background-color: #fff; /* Белый фон контента */
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px; /* Ширина окна */
+  text-align: center; /* Выравнивание по центру */
+}
+
+.close {
+  color: #ff5733; /* Яркий цвет кнопки */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff8c66; /* Цвет кнопки при наведении */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[type="tel"] {
+  width: calc(
+    100% - 20px
+  ); /* Ширина поля ввода номера телефона с учетом отступов */
+  margin-bottom: 10px; /* Отступ между полем ввода и кнопкой */
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background-color: #ff5733; /* Яркий цвет кнопки */
+  color: #fff; /* Цвет текста на кнопке */
+  padding: 10px 20px;
+  border: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* btn scroll */
+.fixed-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 200;
+}
+.button {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  font-size: 16px;
+}
+/* модалка к кнопке */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* grid */
+
+body,
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f5f4f4;
+  font-size: 13px;
+}
+@supports (display: grid) {
+  body,
+  html {
+    display: block;
   }
-  a:hover {
-    color: #747bff;
+}
+
+.message {
+  border: 1px solid #d2d0d0;
+  padding: 2em;
+  font-size: 1.7vw;
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
+}
+@supports (display: grid) {
+  .message {
+    display: none;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+.section {
+  display: none;
+  padding: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 4rem;
   }
+}
+@supports (display: grid) {
+  .section {
+    display: block;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1.5em;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: row dense;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  background: #0c9a9a;
+  color: #fff;
+  grid-column-start: auto;
+  grid-row-start: auto;
+  color: #fff;
+  background: url("./public/\ укл.webp");
+  background-size: cover;
+  background-position: center;
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  counter-increment: item-counter;
+}
+.item:nth-of-type(3n) {
+  background-image: url("./public/2024-01-19\ 11.34.09.jpg");
+}
+.item:nth-of-type(4n) {
+  background-image: url("./public/2024-01-19\ 11.34.17.jpg");
+}
+.item:nth-of-type(5n) {
+  background-image: url("./public/\ блонд.webp");
+}
+.item:nth-of-type(6n) {
+  background-image: url("./public/\ блонд.webp");
+}
+.item:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+.item:hover {
+  transform: scale(1.05);
+}
+.item:hover:after {
+  opacity: 0;
+}
+.item--medium {
+  grid-row-end: span 2;
+}
+.item--large {
+  grid-row-end: span 3;
+}
+.item--full {
+  grid-column-end: auto;
+}
+@media screen and (min-width: 768px) {
+  .item--full {
+    grid-column: 1/-1;
+    grid-row-end: span 2;
+  }
+}
+.item__details {
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  color: #444;
+  background: #fff;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  color: #828282;
+}
+.item__details:before {
+  content: counter(item-counter);
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-right: 0.5em;
+  color: #444;
 }

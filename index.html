@@ -1,13 +1,268 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./fonts/font/MullerBlackItalic.woff2" />
+
+    <title>Magiskus</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <header>
+      <div class="left-column">
+        <div class="contact-info">
+          <p>Адрес: ул. Примерная, 123</p>
+          <p>Телефон: +7 (123) 456-7890</p>
+          <div class="social-media-icons">
+            <!-- Иконки социальных сетей -->
+          </div>
+        </div>
+      </div>
+      <div class="logo">
+        <img src="./public/Frame 1.jpg" alt="Логотип" />
+      </div>
+      <div class="right-column">
+        <div class="contact-info">
+          <p>Адрес: ул. Примерная, 123</p>
+          <p>Телефон: +7 (123) 456-7890</p>
+          <div class="social-media-icons">
+            <!-- Иконки социальных сетей -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Введите ваш номер телефона</h2>
+        <form id="phoneForm">
+          <input
+            type="tel"
+            id="phoneNumber"
+            placeholder="Номер телефона"
+            required />
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div id="modal" style="display: none">
+        <span id="close-modal" style="float: right; cursor: pointer"
+          >&#10006;</span
+        >
+        <h2>Здравствуйте, оставьте свой номер, и мы Вам перезвоним</h2>
+        <form id="modal-form">
+          <input
+            type="text"
+            id="phone-number"
+            placeholder="Введите ваш номер телефона" />
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+
+      <ul>
+        <li>О Нас <a href="#"></a></li>
+        <li>Услуги <a href="#"></a></li>
+        <li>
+          Я Хочу <a href="#"></a>
+          <ul class="dropdown">
+            <li><a href="#" class="scroll-link">Укладку</a></li>
+            <li><a href="#" class="scroll-link">Гладкую кожу</a></li>
+            <li><a href="#" class="scroll-link">Маникюр</a></li>
+            <li><a href="#" class="scroll-link">Идеальную фигуру</a></li>
+            <li><a href="#" class="scroll-link">Подтянутый овал лица</a></li>
+          </ul>
+        </li>
+        <li>Мы В Медиа <a href="#"></a></li>
+        <li id="work-link">Хочу У Вас Работать <a href="#"></a></li>
+      </ul>
+    </div>
+    <div class="gallery">
+      <img src="./public/ блонд.webp" alt="Photo 1" />
+      <img src="./public/ маник.webp" alt="Photo 1" />
+      <button class="prev">Назад</button>
+      <button class="next">Вперед</button>
+    </div>
+    <div class="fixed-buttons">
+      <button class="button" id="openModalButton">Онлайн-запись</button>
+      <button class="button" id="openModalButton2">Закажи звонок</button>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <h2>Оставьте ваш номер телефона</h2>
+        <input
+          class="formNum"
+          type="text"
+          id="phoneNumber"
+          placeholder="Введите номер телефона" />
+        <button id="callMeButton">Перезвоните мне</button>
+      </div>
+    </div>
+
+    <div class="message"></div>
+    <section class="section">
+      <div class="grid">
+        <div class="item">
+          <div class="item__details">jelly-o brownie sweet</div>
+        </div>
+
+        <div class="item item--large">
+          <div class="item__details">Muffin jelly gingerbread</div>
+        </div>
+        <div class="item item--medium">
+          <div class="item__details">sesame snaps chocolate</div>
+        </div>
+        <div class="item item--large">
+          <div class="item__details">Oat cake</div>
+        </div>
+        <!-- <div class="item item--full">
+          <div class="item__details">
+             jujubes cheesecake
+          </div>
+        </div> -->
+        <div class="item item--medium">
+          <div class="item__details">Dragée pudding brownie</div>
+        </div>
+        <div class="item">
+          <div class="item__details">Oat cake</div>
+        </div>
+        <!--    <div class="item">
+          <div class="item__details">
+            powder toffee
+          </div>
+        </div>
+        <div class="item item--medium">
+          <div class="item__details">
+            pudding cheesecake
+          </div>
+        </div>
+        <div class="item item--large">
+          <div class="item__details">
+            toffee bear claw 
+          </div>
+        </div>
+        <div class="item">
+          <div class="item__details">
+            cake cookie croissant
+          </div>
+        </div>
+        <div class="item item--medium">
+          <div class="item__details">
+            liquorice sweet roll
+          </div>
+        </div>
+        <div class="item item--medium">
+          <div class="item__details">
+            chocolate marzipan
+          </div>
+        </div>
+        <div class="item item--large">
+          <div class="item__details">
+            danish dessert lollipop
+          </div>
+        </div>
+        <div class="item">
+          <div class="item__details">
+            sugar plum dragée
+          </div>
+        </div>
+      </div> -->
+      </div>
+    </section>
+
+    <!-- <div class="grid-container">
+      <div class="photo-container">
+        <div class="grid-item">
+          <img
+            id="big"
+            src="./public/ блонд.webp"
+            alt="Photo 1"
+            class="grid-item" />
+          <h2>ОКРАШИВАНИЕ</h2>
+          <p>Description</p>
+        </div>
+      </div>
+      <div class="photo-container">
+        <div class="grid-item">
+          <img
+            id="sml"
+            src="./public/ блонд.webp"
+            alt="Photo 2"
+            class="grid-item" />
+          <h2>ТЕЛО</h2>
+          <p>Description</p>
+        </div>
+      </div>
+      <div class="photo-container">
+        <div class="grid-item">
+          <img
+            id="sml"
+            src="./public/ блонд.webp"
+            alt="Photo 3"
+            class="grid-item" />
+          <h2>ЛИЦО</h2>
+          <p>Description</p>
+        </div>
+      </div>
+
+      <div class="photo-container">
+        <div class="grid-item">
+          <img
+            id="medium"
+            src="./public/ блонд.webp"
+            alt="Photo 4"
+            class="grid-item" />
+          <h2>МАНИКЮР</h2>
+          <p>Description</p>
+        </div>
+      </div>
+      <div class="photo-container">
+        <div class="grid-item">
+          <img
+            id="large"
+            src="./public/ блонд.webp"
+            alt="Photo 5"
+            class="grid-item" />
+          <h2>ТЕЛО</h2>
+          <p>Description</p>
+        </div>
+      </div>
+      <div class="photo-container">
+        <div class="grid-item">
+          <img src="./public/ блонд.webp" alt="Photo 6" class="grid-item" />
+          <h2>РЕСНИЦЫ</h2>
+          <p>Description</p>
+        </div>
+      </div>
+      <div class="photo-container">
+        <div class="grid-item">
+          <img src="./public/ блонд.webp" alt="Photo 7" class="grid-item" />
+          <h2>ЛИЦО</h2>
+          <p>Description</p>
+        </div>
+      </div>
+      <div class="photo-container">
+        <div class="grid-item">
+          <img src="./public/ блонд.webp" alt="Photo 8" class="grid-item" />
+          <h2>ТЕЛО</h2>
+          <p>Description</p>
+        </div>
+      </div>
+      <div class="photo-container">
+        <div class="grid-item">
+          <img src="./public/ блонд.webp" alt="Photo 9" class="grid-item" />
+          <h2>ВОЛОСЫ</h2>
+          <p>Description</p>
+        </div>
+      </div> -->
+
+    <!-- <button class="hover-btn">К Услугам</button> -->
+    <!-- </div> -->
   </body>
+  <script src="./slider.js"></script>
+  <script src="./modal.js"></script>
+  <script src="./main.js"></script>
 </html>
