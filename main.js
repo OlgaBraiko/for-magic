@@ -52,3 +52,63 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//swipe gallery
+
+let currentImageIndex = 0;
+const images = document.querySelectorAll(".gallery img");
+const totalImages = images.length;
+
+function showImage(index) {
+  images.forEach((image, i) => {
+    if (i === index) {
+      image.style.display = "block";
+    } else {
+      image.style.display = "none";
+    }
+  });
+}
+
+function nextImage() {
+  currentImageIndex = (currentImageIndex + 1) % totalImages;
+  showImage(currentImageIndex);
+}
+
+function prevImage() {
+  currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+  showImage(currentImageIndex);
+}
+
+// Показываем первое изображение при загрузке страницы
+showImage(currentImageIndex);
+
+// Автоматическое листание изображений
+let intervalId = setInterval(nextImage, 3000);
+
+// Остановить автоматическое листание при наведении мыши
+document.querySelector(".gallery").addEventListener("mouseover", () => {
+  clearInterval(intervalId);
+});
+
+// Возобновить автоматическое листание при уходе мыши
+document.querySelector(".gallery").addEventListener("mouseout", () => {
+  intervalId = setInterval(nextImage, 3000);
+});
+
+// Получаем ссылки на изображения
+const images1 = document.querySelectorAll(".gallery img");
+
+// Добавляем обработчик события для каждого изображения
+images1.forEach((image) => {
+  image.addEventListener("click", () => {
+    // Применяем анимацию при нажатии на изображение
+    image.style.transition = "opacity 0.5s ease-in-out";
+    image.style.opacity = 0;
+    setTimeout(() => {
+      // После завершения анимации загружаем следующее изображение
+      // В этом примере предполагается, что у вас есть код для загрузки следующего изображения
+      // Например, вы можете изменять атрибут src у тега <img> для загрузки нового изображения
+      image.style.opacity = 1;
+    }, 500); // Ждем 500 миллисекунд (время анимации) перед загрузкой нового изображения
+  });
+});

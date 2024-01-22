@@ -36,7 +36,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: 100px;
   font-size: 16px;
   font-weight: 400;
@@ -77,8 +76,12 @@ header {
 .dropdown {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
+
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
   background-color: #fff; /* Белый фон */
   border: none;
   padding: 10px;
@@ -89,8 +92,11 @@ header {
   display: block;
   width: auto; /* Подстраивается под ширину контента */
   text-decoration: none;
-  color: #333; /* Цвет ссылок */
+  color: grey; /* Цвет ссылок */
   padding: 5px 0;
+}
+.dropdown a:hover {
+  color: #000;
 }
 
 .gallery {
@@ -105,7 +111,6 @@ header {
   height: auto;
   display: block;
   position: absolute;
-  transition: transform 0.5s ease-in-out;
 }
 
 .gallery button {
