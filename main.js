@@ -31,7 +31,7 @@ window.addEventListener("scroll", function () {
   });
 
   const currentItem = gridItems[currentIdx];
-  const rect = currentItem.getBoundingClientRect();
+  const rect = currentItem.getBoundingClientRect(); //error
 
   // Перемещаем кнопку в центр текущей фотографии
   scrollBtn.style.top = rect.top + rect.height / 2 + "px";
@@ -112,3 +112,63 @@ images1.forEach((image) => {
     }, 500); // Ждем 500 миллисекунд (время анимации) перед загрузкой нового изображения
   });
 });
+
+// бургер
+
+const burgerMenu = document.querySelector(".burger-menu");
+const navLinks = document.querySelector(".navbar ul");
+const scrollLink = document.querySelector(".scroll-link");
+burgerMenu.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  scrollLink.addEventListener("click", () => {
+    window.scrollBy(0, 400);
+  });
+});
+// баг со скролом и дропдаун!!!!!!
+
+const menuItem = document.querySelector(".menu li");
+const dropdownMenu = document.querySelector(".dropdown");
+
+const handleResize = () => {
+  if (window.innerWidth <= 800) {
+    dropdownMenu.style.display = "none";
+  } else {
+    dropdownMenu.style.display = "block";
+  }
+};
+
+const handleMenuItemHover = () => {
+  if (window.innerWidth > 800) {
+    dropdownMenu.style.display = "block";
+  }
+};
+
+const handleMenuItemLeave = () => {
+  if (window.innerWidth > 800) {
+    dropdownMenu.style.display = "none";
+  }
+};
+
+window.addEventListener("resize", handleResize);
+menuItem.addEventListener("mouseover", handleMenuItemHover);
+menuItem.addEventListener("mouseout", handleMenuItemLeave);
+
+// WhatsApp
+document
+  .getElementById("openModalButton2")
+  .addEventListener("click", function () {
+    window.location.href = "https://wa.me/79340000384";
+  });
+
+// кнопка отзвы салон
+
+document.querySelector(".feed-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+  window.location.href =
+    "https://yandex.ru/maps/org/magiya_iskusstva/1006427653/reviews/?ll=37.281546%2C55.685137&z=14";
+});
+
+// переключаем на страницу прайс
+function redirectToPricePage() {
+  window.location.href = "./price.html";
+}
