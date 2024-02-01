@@ -20,7 +20,9 @@
         </div>
       </div>
       <div class="logo">
-        <img src="./public/Frame 1.jpg" alt="Логотип" />
+        <img
+          src="./public/Снимок экрана 2024-01-27 в 18.59.55.svg"
+          alt="Логотип" />
       </div>
       <div class="right-column">
         <div class="contact-info">
@@ -62,22 +64,27 @@
         </form>
       </div>
 
-      <ul>
-        <li>О Нас <a href="#"></a></li>
-        <li>Услуги <a href="#"></a></li>
-        <li>
-          Я Хочу <a href="#"></a>
-          <ul class="dropdown">
-            <li><a href="#" class="scroll-link">Укладку</a></li>
-            <li><a href="#" class="scroll-link">Гладкую кожу</a></li>
-            <li><a href="#" class="scroll-link">Маникюр</a></li>
-            <li><a href="#" class="scroll-link">Идеальную фигуру</a></li>
-            <li><a href="#" class="scroll-link">Подтянутый овал лица</a></li>
-          </ul>
-        </li>
-        <li>Мы В Медиа <a href="#"></a></li>
-        <li id="work-link">Хочу У Вас Работать <a href="#"></a></li>
-      </ul>
+      <div class="navbar">
+        <ul>
+          <li>О Нас <a href="#"></a></li>
+          <li>Услуги <a href="#"></a></li>
+          <li>
+            Я Хочу <a href="#"></a>
+            <ul class="dropdown">
+              <li><a href="#" class="scroll-link">Укладку</a></li>
+              <li><a href="#" class="scroll-link">Гладкую кожу</a></li>
+              <li><a href="#" class="scroll-link">Маникюр</a></li>
+              <li><a href="#" class="scroll-link">Идеальную фигуру</a></li>
+              <li><a href="#" class="scroll-link">Подтянутый овал лица</a></li>
+            </ul>
+          </li>
+          <li>Мы В Медиа <a href="#"></a></li>
+          <li id="work-link">Хочу У Вас Работать <a href="#"></a></li>
+        </ul>
+
+        <div class="burger-menu">&#9776;</div>
+        <!-- Используем символ "бургера" -->
+      </div>
     </div>
     <div class="gallery">
       <img src="./public/ блонд.webp" alt="Photo 1" />
@@ -105,162 +112,73 @@
     <div class="message"></div>
     <section class="section">
       <div class="grid">
-        <div class="item">
-          <div class="item__details">jelly-o brownie sweet</div>
+        <div class="item item--large" onclick="redirectToPricePage()">
+          <div class="item__details">Волосы Форма Стиль</div>
         </div>
-
-        <div class="item item--large">
-          <div class="item__details">Muffin jelly gingerbread</div>
+        <div class="item item--large" onclick="redirectToPricePage()">
+          <div class="item__details">Лицо Брови Ресницы make-up</div>
         </div>
-        <div class="item item--medium">
-          <div class="item__details">sesame snaps chocolate</div>
+        <div class="item item--large" onclick="redirectToPricePage()">
+          <div class="item__details">Тело Депиляция</div>
         </div>
-        <div class="item item--large">
-          <div class="item__details">Oat cake</div>
+        <div class="item item--medium" onclick="redirectToPricePage()">
+          <div class="item__details">Лицо Уход Пилинги</div>
         </div>
-        <!-- <div class="item item--full">
-          <div class="item__details">
-             jujubes cheesecake
-          </div>
-        </div> -->
-        <div class="item item--medium">
-          <div class="item__details">Dragée pudding brownie</div>
+        <div class="item item--large" onclick="redirectToPricePage()">
+          <div class="item__details">Тело</div>
         </div>
-        <div class="item">
-          <div class="item__details">Oat cake</div>
+        <div class="item item--medium" onclick="redirectToPricePage()">
+          <div class="item__details">Маникюр Педикюр</div>
         </div>
-        <!--    <div class="item">
-          <div class="item__details">
-            powder toffee
-          </div>
-        </div>
-        <div class="item item--medium">
-          <div class="item__details">
-            pudding cheesecake
-          </div>
-        </div>
-        <div class="item item--large">
-          <div class="item__details">
-            toffee bear claw 
-          </div>
-        </div>
-        <div class="item">
-          <div class="item__details">
-            cake cookie croissant
-          </div>
-        </div>
-        <div class="item item--medium">
-          <div class="item__details">
-            liquorice sweet roll
-          </div>
-        </div>
-        <div class="item item--medium">
-          <div class="item__details">
-            chocolate marzipan
-          </div>
-        </div>
-        <div class="item item--large">
-          <div class="item__details">
-            danish dessert lollipop
-          </div>
-        </div>
-        <div class="item">
-          <div class="item__details">
-            sugar plum dragée
-          </div>
-        </div>
-      </div> -->
       </div>
     </section>
 
-    <!-- <div class="grid-container">
-      <div class="photo-container">
-        <div class="grid-item">
+    <div class="container__feedbek">
+      <h2 class="title__feedbek">ОТЗЫВЫ</h2>
+      <form class="form-feed">
+        <button class="feed-btn">Оставить отзыв</button>
+      </form>
+      <div class="wrapp">
+        <div class="wrapp__image">
           <img
-            id="big"
-            src="./public/ блонд.webp"
-            alt="Photo 1"
-            class="grid-item" />
-          <h2>ОКРАШИВАНИЕ</h2>
-          <p>Description</p>
+            src="./public/Снимок экрана 2024-01-27 в 16.42.38.png"
+            width="600px"
+            height="500px"
+            alt="" />
         </div>
-      </div>
-      <div class="photo-container">
-        <div class="grid-item">
+        <div class="wrapp__image">
           <img
-            id="sml"
-            src="./public/ блонд.webp"
-            alt="Photo 2"
-            class="grid-item" />
-          <h2>ТЕЛО</h2>
-          <p>Description</p>
+            src="./public/Снимок экрана 2024-01-27 в 16.40.35.png"
+            width="600px"
+            height="500px"
+            alt="" />
         </div>
       </div>
-      <div class="photo-container">
-        <div class="grid-item">
-          <img
-            id="sml"
-            src="./public/ блонд.webp"
-            alt="Photo 3"
-            class="grid-item" />
-          <h2>ЛИЦО</h2>
-          <p>Description</p>
-        </div>
+    </div>
+    <h2 class="about__title">О Нас</h2>
+    <div class="about-us">
+      <img src="./public/_ (1).jpeg" alt="Фото О Нас" />
+      <p class="about-us-text">
+        Приглашаем вас окунуться в мир настоящей красоты и ухода в "Магии
+        Искусства", где каждый посетитель становится главным героем своей
+        собственной истории преображения.
+      </p>
+    </div>
+    <footer>
+      <div class="contact-info">
+        <h3>Контакты</h3>
+        <p>Адрес: ул. Примерная, д. 123, г. Примерный</p>
+        <p>Телефон: +7 (123) 456-7890</p>
+        <p>График работы: Пн-Пт: 9:00-18:00</p>
       </div>
-
-      <div class="photo-container">
-        <div class="grid-item">
-          <img
-            id="medium"
-            src="./public/ блонд.webp"
-            alt="Photo 4"
-            class="grid-item" />
-          <h2>МАНИКЮР</h2>
-          <p>Description</p>
-        </div>
+      <div class="photo">
+        <img
+          src="./public/Снимок экрана 2024-02-01 в 15.22.46.png"
+          width="700px"
+          height="600px"
+          alt="mapp" />
       </div>
-      <div class="photo-container">
-        <div class="grid-item">
-          <img
-            id="large"
-            src="./public/ блонд.webp"
-            alt="Photo 5"
-            class="grid-item" />
-          <h2>ТЕЛО</h2>
-          <p>Description</p>
-        </div>
-      </div>
-      <div class="photo-container">
-        <div class="grid-item">
-          <img src="./public/ блонд.webp" alt="Photo 6" class="grid-item" />
-          <h2>РЕСНИЦЫ</h2>
-          <p>Description</p>
-        </div>
-      </div>
-      <div class="photo-container">
-        <div class="grid-item">
-          <img src="./public/ блонд.webp" alt="Photo 7" class="grid-item" />
-          <h2>ЛИЦО</h2>
-          <p>Description</p>
-        </div>
-      </div>
-      <div class="photo-container">
-        <div class="grid-item">
-          <img src="./public/ блонд.webp" alt="Photo 8" class="grid-item" />
-          <h2>ТЕЛО</h2>
-          <p>Description</p>
-        </div>
-      </div>
-      <div class="photo-container">
-        <div class="grid-item">
-          <img src="./public/ блонд.webp" alt="Photo 9" class="grid-item" />
-          <h2>ВОЛОСЫ</h2>
-          <p>Description</p>
-        </div>
-      </div> -->
-
-    <!-- <button class="hover-btn">К Услугам</button> -->
-    <!-- </div> -->
+    </footer>
   </body>
   <script src="./slider.js"></script>
   <script src="./modal.js"></script>
