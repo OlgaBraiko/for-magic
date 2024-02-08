@@ -12,8 +12,8 @@
     <header>
       <div class="left-column">
         <div class="contact-info">
-          <p>Адрес: ул. Примерная, 123</p>
-          <p>Телефон: +7 (123) 456-7890</p>
+          <p>Адрес: ул. Говорова, 2А</p>
+          <p onclick="callPhoneNumber()">Телефон: +7 (934) 000-0384</p>
           <div class="social-media-icons">
             <!-- Иконки социальных сетей -->
           </div>
@@ -26,11 +26,22 @@
       </div>
       <div class="right-column">
         <div class="contact-info">
-          <p>Адрес: ул. Примерная, 123</p>
-          <p>Телефон: +7 (123) 456-7890</p>
-          <div class="social-media-icons">
-            <!-- Иконки социальных сетей -->
-          </div>
+          <!-- Иконки социальных сетей -->
+          <img
+            src="telegram-icon.png"
+            alt="Telegram"
+            class="social-icon"
+            onclick="openLink( )" />
+          <img
+            src="vk-icon.png"
+            alt="VKontakte"
+            class="social-icon"
+            onclick="openLink( )" />
+          <img
+            src="instagram-icon.png"
+            alt="Instagram"
+            class="social-icon"
+            onclick="openLink(' ')" />
         </div>
       </div>
     </header>
@@ -112,22 +123,22 @@
     <div class="message"></div>
     <section class="section">
       <div class="grid">
-        <div class="item item--large" onclick="redirectToPricePage()">
+        <div class="item item--large" onclick="redirectToPricePageForm()">
           <div class="item__details">Волосы Форма Стиль</div>
         </div>
-        <div class="item item--large" onclick="redirectToPricePage()">
+        <div class="item item--large" onclick="redirectToPricePageMakeUp()">
           <div class="item__details">Лицо Брови Ресницы make-up</div>
         </div>
-        <div class="item item--large" onclick="redirectToPricePage()">
+        <div class="item item--large" onclick="redirectToPricePageDepelition()">
           <div class="item__details">Тело Депиляция</div>
         </div>
-        <div class="item item--medium" onclick="redirectToPricePage()">
+        <div class="item item--medium" onclick="redirectToPricePageFace()">
           <div class="item__details">Лицо Уход Пилинги</div>
         </div>
-        <div class="item item--large" onclick="redirectToPricePage()">
+        <div class="item item--large" onclick="redirectToPricePageBody()">
           <div class="item__details">Тело</div>
         </div>
-        <div class="item item--medium" onclick="redirectToPricePage()">
+        <div class="item item--medium" onclick="redirectToPricePageNail()">
           <div class="item__details">Маникюр Педикюр</div>
         </div>
       </div>
@@ -157,7 +168,9 @@
     </div>
     <h2 class="about__title">О Нас</h2>
     <div class="about-us">
-      <img src="./public/_ (1).jpeg" alt="Фото О Нас" />
+      <img
+        src="./public/Снимок экрана 2024-02-03 в 14.20.12.png"
+        alt="Фото О Нас" />
       <p class="about-us-text">
         Приглашаем вас окунуться в мир настоящей красоты и ухода в "Магии
         Искусства", где каждый посетитель становится главным героем своей
@@ -167,9 +180,9 @@
     <footer>
       <div class="contact-info">
         <h3>Контакты</h3>
-        <p>Адрес: ул. Примерная, д. 123, г. Примерный</p>
-        <p>Телефон: +7 (123) 456-7890</p>
-        <p>График работы: Пн-Пт: 9:00-18:00</p>
+        <p>Адрес: ул. Говорова, д. 2А, г. Одинцово</p>
+        <p onclick="callPhoneNumber()">Телефон: +7 (934) 000-0384</p>
+        <p>График работы: Пн-Вс: 9:00-21:00</p>
       </div>
       <div class="photo">
         <img

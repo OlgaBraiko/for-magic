@@ -169,6 +169,35 @@ document.querySelector(".feed-btn").addEventListener("click", function (e) {
 });
 
 // переключаем на страницу прайс
-function redirectToPricePage() {
-  window.location.href = "./price.html";
+
+function redirectToPricePageForm() {
+  window.location.href = "./hair.html";
 }
+function redirectToPricePageNail() {
+  window.location.href = "./nail.html";
+}
+function redirectToPricePageDepelition() {
+  window.location.href = "./depel.html";
+}
+function redirectToPricePageFace() {
+  window.location.href = "./face.html";
+}
+function redirectToPricePageBody() {
+  window.location.href = "./priceBody.html";
+}
+function redirectToPricePageMakeUp() {
+  window.location.href = "./makeup.html";
+}
+// звонок на номер
+
+function callPhoneNumber() {
+  const phoneNumber = "+79340000384";
+  window.open("tel:" + phoneNumber);
+}
+//  соц сети
+function openLink(url) {
+  window.open(url, "_blank");
+}
+// бургер
+
+// выпадающий список
