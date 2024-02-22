@@ -1,18 +1,17 @@
 //
 document.addEventListener("DOMContentLoaded", function () {
-  const menuItems = document.querySelectorAll(".menu li");
+  const menuItems = document.querySelector(".navbar");
   const dropdown = document.querySelector(".dropdown");
 
   // Скрываем выпадающий список по умолчанию
-  dropdown.style.display = "none";
 
   // Отображаем выпадающий список при наведении на третий пункт меню
-  menuItems[2].addEventListener("mouseover", function () {
+  menuItems[3].addEventListener("mouseover", function () {
     dropdown.style.display = "block";
   });
 
   // Скрываем выпадающий список при уходе курсора с третьего пункта меню
-  menuItems[2].addEventListener("mouseout", function () {
+  menuItems[3].addEventListener("mouseout", function () {
     dropdown.style.display = "none";
   });
 });
@@ -30,25 +29,32 @@ window.addEventListener("scroll", function () {
     }
   });
 
-  const currentItem = gridItems[currentIdx];
-  const rect = currentItem.getBoundingClientRect(); //error
-
-  // Перемещаем кнопку в центр текущей фотографии
-  scrollBtn.style.top = rect.top + rect.height / 2 + "px";
-  scrollBtn.style.left = rect.left + rect.width / 2 + "px";
+  // const currentItem = gridItems[currentIdx];
+  // const rect = currentItem.getBoundingClientRect(); //error
 });
 
 // скролл к услугам
-document.addEventListener("DOMContentLoaded", function () {
-  let scrollLinks = document.querySelectorAll(".scroll-link");
-  scrollLinks.forEach(function (link) {
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollLinks = document.querySelectorAll(".scroll-link");
+  scrollLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
       event.preventDefault();
-      let targetPosition = window.scrollY + 1200;
+      const targetPosition = window.scrollY + 1200;
       window.scrollTo({
         top: targetPosition,
         behavior: "smooth", // Добавляем плавную анимацию
       });
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollAbout = document.querySelector(".scroll-about");
+  scrollAbout.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 3200,
+      behavior: "smooth",
     });
   });
 });
@@ -115,43 +121,19 @@ images1.forEach((image) => {
 
 // бургер
 
-const burgerMenu = document.querySelector(".burger-menu");
-const navLinks = document.querySelector(".navbar ul");
-const scrollLink = document.querySelector(".scroll-link");
-burgerMenu.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  scrollLink.addEventListener("click", () => {
-    window.scrollBy(0, 400);
+//   дропдаун!!!!!!
+
+document
+  .querySelector(".dropdown-trigger")
+  .addEventListener("click", function () {
+    if (window.innerWidth <= 900) {
+      window.scrollBy(0, 1300);
+      window.scrollBy({
+        top: 500,
+        behavior: "smooth",
+      });
+    }
   });
-});
-// баг со скролом и дропдаун!!!!!!
-
-const menuItem = document.querySelector(".menu li");
-const dropdownMenu = document.querySelector(".dropdown");
-
-const handleResize = () => {
-  if (window.innerWidth <= 800) {
-    dropdownMenu.style.display = "none";
-  } else {
-    dropdownMenu.style.display = "block";
-  }
-};
-
-const handleMenuItemHover = () => {
-  if (window.innerWidth > 800) {
-    dropdownMenu.style.display = "block";
-  }
-};
-
-const handleMenuItemLeave = () => {
-  if (window.innerWidth > 800) {
-    dropdownMenu.style.display = "none";
-  }
-};
-
-window.addEventListener("resize", handleResize);
-menuItem.addEventListener("mouseover", handleMenuItemHover);
-menuItem.addEventListener("mouseout", handleMenuItemLeave);
 
 // WhatsApp
 document
@@ -159,13 +141,22 @@ document
   .addEventListener("click", function () {
     window.location.href = "https://wa.me/79340000384";
   });
+function openWorkWats() {
+  window.location.href = "https://wa.me/79340000384";
+}
 
-// кнопка отзвы салон
+// кнопка отзывы салон
 
-document.querySelector(".feed-btn").addEventListener("click", function (e) {
+document.querySelector(".feed-btn").addEventListener("click", (e) => {
   e.preventDefault();
   window.location.href =
     "https://yandex.ru/maps/org/magiya_iskusstva/1006427653/reviews/?ll=37.281546%2C55.685137&z=14";
+});
+
+document.querySelector(".feed-btn2").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href =
+    "https://zoon.ru/msk/beauty/salon_krasoty_magiya_iskusstva/#reviews";
 });
 
 // переключаем на страницу прайс
@@ -198,6 +189,3 @@ function callPhoneNumber() {
 function openLink(url) {
   window.open(url, "_blank");
 }
-// бургер
-
-// выпадающий список

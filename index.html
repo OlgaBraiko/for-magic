@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,34 +14,25 @@
         <div class="contact-info">
           <p>Адрес: ул. Говорова, 2А</p>
           <p onclick="callPhoneNumber()">Телефон: +7 (934) 000-0384</p>
-          <div class="social-media-icons">
-            <!-- Иконки социальных сетей -->
-          </div>
+          <div class="social-media-icons"></div>
         </div>
       </div>
       <div class="logo">
-        <img
-          src="./public/Снимок экрана 2024-01-27 в 18.59.55.svg"
-          alt="Логотип" />
+        <h1 class="title">Магия Искусства</h1>
       </div>
       <div class="right-column">
         <div class="contact-info">
           <!-- Иконки социальных сетей -->
           <img
-            src="telegram-icon.png"
+            src="./public/иконка.jpeg"
             alt="Telegram"
             class="social-icon"
             onclick="openLink( )" />
           <img
-            src="vk-icon.png"
+            src="./public/иконка вк.svg"
             alt="VKontakte"
             class="social-icon"
             onclick="openLink( )" />
-          <img
-            src="instagram-icon.png"
-            alt="Instagram"
-            class="social-icon"
-            onclick="openLink(' ')" />
         </div>
       </div>
     </header>
@@ -61,27 +52,13 @@
     </div>
 
     <div class="menu">
-      <div id="modal" style="display: none">
-        <span id="close-modal" style="float: right; cursor: pointer"
-          >&#10006;</span
-        >
-        <h2>Здравствуйте, оставьте свой номер, и мы Вам перезвоним</h2>
-        <form id="modal-form">
-          <input
-            type="text"
-            id="phone-number"
-            placeholder="Введите ваш номер телефона" />
-          <button type="submit">Отправить</button>
-        </form>
-      </div>
-
       <div class="navbar">
-        <ul>
-          <li>О Нас <a href="#"></a></li>
-          <li>Услуги <a href="#"></a></li>
-          <li>
-            Я Хочу <a href="#"></a>
-            <ul class="dropdown">
+        <ul class="menu1">
+          <li class="scroll-about">О Нас</li>
+          <li class="scroll-link">Услуги</li>
+          <li class="dropdown-trigger">
+            Я Хочу
+            <ul class="dropdown1">
               <li><a href="#" class="scroll-link">Укладку</a></li>
               <li><a href="#" class="scroll-link">Гладкую кожу</a></li>
               <li><a href="#" class="scroll-link">Маникюр</a></li>
@@ -89,17 +66,20 @@
               <li><a href="#" class="scroll-link">Подтянутый овал лица</a></li>
             </ul>
           </li>
-          <li>Мы В Медиа <a href="#"></a></li>
-          <li id="work-link">Хочу У Вас Работать <a href="#"></a></li>
+          <li>Мы В Медиа</li>
+          <li onclick="openWorkWats()" id="work-link">Хочу У Вас Работать</li>
         </ul>
 
-        <div class="burger-menu">&#9776;</div>
-        <!-- Используем символ "бургера" -->
+        <div class="burger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </div>
     </div>
     <div class="gallery">
-      <img src="./public/ блонд.webp" alt="Photo 1" />
-      <img src="./public/ маник.webp" alt="Photo 1" />
+      <img src="./public/ставить2.jpeg" alt="Photo 1" />
+      <img class="foto" src="./public/ставить.jpeg" alt="Photo 1" />
       <button class="prev">Назад</button>
       <button class="next">Вперед</button>
     </div>
@@ -146,9 +126,15 @@
 
     <div class="container__feedbek">
       <h2 class="title__feedbek">ОТЗЫВЫ</h2>
-      <form class="form-feed">
-        <button class="feed-btn">Оставить отзыв</button>
-      </form>
+      <div class="form-wrap">
+        <form class="form-feed">
+          <button class="feed-btn">Оставить отзыв Яндекс</button>
+        </form>
+        <form class="form-feed2">
+          <button class="feed-btn2">Оставить отзыв Zoon</button>
+        </form>
+      </div>
+
       <div class="wrapp">
         <div class="wrapp__image">
           <img
