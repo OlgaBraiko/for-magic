@@ -26,10 +26,7 @@ header {
 
 .contact-info {
   margin-right: 20px;
-}
-
-.social-media-icons {
-  /* Стили для иконок социальных сетей */
+  font-size: 20px;
 }
 
 .menu {
@@ -57,46 +54,29 @@ header {
 }
 
 /* dropdown */
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
-.menu li {
-  display: inline-block;
-  position: relative;
-  font-weight: 500;
-}
-
-.menu li:hover .dropdown {
-  display: block;
-}
-
-.dropdown {
+.menu1 .dropdown1 {
+  z-index: 200;
   display: none;
   position: absolute;
-  text-transform: lowercase;
-  left: 50%;
-  transform: translateX(-50%);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #fff; /* Белый фон */
-  border: none;
-  padding: 10px;
-  z-index: 1000; /* Устанавливаем высокий z-index */
 }
 
-.dropdown a {
-  display: block;
-  width: auto; /* Подстраивается под ширину контента */
-  text-decoration: none;
-  color: grey; /* Цвет ссылок */
-  padding: 5px 0;
+.menu1 .dropdown-trigger {
+  cursor: pointer;
 }
-.dropdown a:hover {
-  color: #000;
+
+.menu1 .dropdown1 li {
+  display: block;
+}
+
+.menu1 .dropdown-trigger:hover .dropdown1 {
+  display: block;
+}
+
+@media screen and (max-width: 900px) {
+  .menu1 .dropdown-trigger:hover .dropdown1 {
+    display: none;
+  }
 }
 
 .gallery {
@@ -201,24 +181,6 @@ button {
   width: 100px;
   text-align: center;
   font-size: 16px;
-}
-/* ///// */
-/* модалка к кнопке */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-}
-.modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
 }
 
 /* grid */
@@ -356,8 +318,8 @@ h1 {
   padding: 5px;
   color: #fff;
   text-transform: lowercase;
-  font-weight: 700;
-  font-size: 25px;
+  font-weight: 500;
+  font-size: 16px;
   background: #000;
 
   letter-spacing: 1px;
@@ -368,14 +330,36 @@ h1 {
   font-weight: bold;
   font-size: 1.1rem;
   padding-right: 0.5em;
-  color: #444;
+  color: #000;
 }
 
 /* бургер */
+
+.burger-menu {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.line {
+  width: 50px;
+  height: 4px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .burger-menu {
+    display: block;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
-  /* align-items: center; */
+  align-items: center;
   font-size: 18px;
   color: #000;
   padding: 30px 30px;
@@ -447,14 +431,25 @@ h1 {
   margin-left: 30px;
 }
 
-/* new modal */
-
 /* feed-form */
 .form-feed {
   margin-left: 260px;
 }
+.form-feed2 {
+  margin-left: 600px;
+}
+.form-wrap {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
 .feed-btn {
   border: none;
+}
+
+.feed-btn:hover,
+.feed-btn2:hover {
+  background-color: rgb(102, 150, 212);
 }
 /* о нас */
 .about-us {
@@ -497,7 +492,6 @@ footer {
   margin: 100px;
 }
 
-/* медиа запросы */
 body {
   margin: 0;
   padding: 0;
@@ -606,21 +600,6 @@ header {
   display: block;
 }
 
-.dropdown {
-  display: none;
-  position: absolute;
-  text-transform: lowercase;
-  left: 50%;
-  transform: translateX(-50%);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #fff; /* Белый фон */
-  border: none;
-  padding: 10px;
-  z-index: 1000; /* Устанавливаем высокий z-index */
-}
-
 /* Медиа-запрос для мобильных устройств до 950px */
 @media (max-width: 950px) {
   .menu ul {
@@ -699,4 +678,91 @@ header {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 228, 225, 0.5); /* Нежный цвет фона */
+}
+/* соц сети */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon {
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* .dropdown */
+
+.dropdown1 {
+  display: none;
+  position: absolute;
+  text-transform: lowercase;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff; /* Белый фон */
+  border: none;
+  padding: 10px;
+  color: #888;
+  z-index: 1000;
+}
+.dropdown1 a {
+  text-decoration: none;
+  line-height: 2;
+  color: #888;
+  font-size: 16px;
+}
+
+/* медиа запросы шапка */
+
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .wrapp {
+    min-width: 100%;
+  }
+
+  .section {
+    margin-top: -150px;
+  }
+  .wrapp {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-feed {
+    margin-left: 120px;
+  }
+
+  .form-feed2 {
+    margin-left: 120px;
+  }
+
+  .feed-btn {
+    margin-right: 10px;
+  }
+  .photo {
+    display: none;
+  }
+  footer {
+    background-color: #333232;
+    color: #ccc;
+    margin-top: 20px;
+  }
+  .about-us {
+    padding-left: 20px;
+  }
+
+  .about-us-text {
+    font-size: 20px;
+  }
+  .about__title {
+    font-size: 25px;
+  }
 }
