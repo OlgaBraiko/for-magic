@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const menuItems = document.querySelectorAll(".navbar .menu1 > li");
-  const dropdown = document.querySelector(".dropdown");
+  const dropdown = document.querySelector(".dropdown1");
 
   // Отображаем выпадающий список при наведении на третий пункт меню
   menuItems[3]?.addEventListener("mouseover", function () {
@@ -150,10 +150,6 @@ document.querySelector(".feed-btn2").addEventListener("click", (e) => {
 
 // звонок на номер
 
-function callPhoneNumber() {
-  const phoneNumber = "+79340000384";
-  window.open("tel:" + phoneNumber);
-}
 //  соц сети
 function openLink(url) {
   window.open(url, "_blank");
