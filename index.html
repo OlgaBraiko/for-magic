@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./fonts/font/MullerBlackItalic.woff2" />
 
     <title>Magiskus</title>
+
+    <script type="module" src="./slider.js" defer></script>
+    <script type="module" src="./modal.js" defer></script>
+    <script type="module" src="./main.js" defer></script>
   </head>
   <body>
     <header>
       <div class="left-column">
         <div class="contact-info">
           <p>Адрес: ул. Говорова, 2А</p>
-          <p onclick="callPhoneNumber()">Телефон: +7 (934) 000-0384</p>
+          <a href="tel:+79340000384">Телефон: +7 (934) 000-0384</a>
           <div class="social-media-icons"></div>
         </div>
       </div>
@@ -107,12 +110,12 @@
     <div class="message"></div>
     <section class="section">
       <div class="grid">
-        <div class="item item--large" onclick="redirectToPricePageForm()">
+        <a class="item item--large" href="hair.html">
           <div class="item__details">Волосы Форма Стиль</div>
-        </div>
-        <div class="item item--large" onclick="redirectToPricePageMakeUp()">
+        </a>
+        <a class="item item--large" onclick="redirectToPricePageMakeUp()">
           <div class="item__details">Лицо Брови Ресницы make-up</div>
-        </div>
+        </a>
         <div class="item item--large" onclick="redirectToPricePageDepelition()">
           <div class="item__details">Тело Депиляция</div>
         </div>
@@ -183,7 +186,4 @@
       </div>
     </footer>
   </body>
-  <script src="./slider.js"></script>
-  <script src="./modal.js"></script>
-  <script src="./main.js"></script>
 </html>
