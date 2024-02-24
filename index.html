@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-
     <title>Magiskus</title>
   </head>
   <body>
@@ -39,20 +38,6 @@
         </div>
       </div>
     </header>
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Введите ваш номер телефона</h2>
-        <form id="phoneForm">
-          <input
-            type="tel"
-            id="phoneNumber"
-            placeholder="Номер телефона"
-            required />
-          <button type="submit">Отправить</button>
-        </form>
-      </div>
-    </div>
 
     <div class="menu">
       <div class="navbar">
@@ -62,15 +47,21 @@
           <li class="dropdown-trigger">
             Я Хочу
             <ul class="dropdown1">
-              <li><a href="#" class="scroll-link">Укладку</a></li>
-              <li><a href="#" class="scroll-link">Гладкую кожу</a></li>
-              <li><a href="#" class="scroll-link">Маникюр</a></li>
-              <li><a href="#" class="scroll-link">Идеальную фигуру</a></li>
-              <li><a href="#" class="scroll-link">Подтянутый овал лица</a></li>
+              <li><a href="hair.html" class="scroll-link">Укладку</a></li>
+              <li><a href="face.html" class="scroll-link">Гладкую кожу</a></li>
+              <li><a href="nail.html" class="scroll-link">Маникюр</a></li>
+              <li>
+                <a href="priceBody.html" class="scroll-link"
+                  >Идеальную фигуру</a
+                >
+              </li>
+              <li>
+                <a href="face.html" class="scroll-link">Подтянутый овал лица</a>
+              </li>
             </ul>
           </li>
           <li>Мы В Медиа</li>
-          <li onclick="openWorkWats()" id="work-link">Хочу У Вас Работать</li>
+          <li><a href="tel:+79340000384"> Хочу У Вас Работать </a></li>
         </ul>
 
         <div class="burger-menu">
@@ -111,12 +102,14 @@
             class="item__details"
             src="./public/IMAGE 2024-01-23 11:16:07.jpg"
             alt="" />
+          <div class="caption">Волосы форма стиль цвет</div>
         </a>
         <a class="item item__container" href="makeup.html">
           <img
             class="item__details"
             src="./public/IMAGE 2024-01-23 11:19:05.jpg"
             alt="" />
+          <div class="caption">Лицо брови make-up</div>
         </a>
         <a class="item item__container" href="face.html">
           <img
@@ -124,6 +117,7 @@
             src="./public/Снимок экрана 2024-01-25 в 22.03.12.png"
             alt=""
             height="420" />
+          <div class="caption">Лицо. Уход.Пилинги.Массаж</div>
         </a>
         <a class="item item__container" href="depel.html">
           <img
@@ -131,6 +125,7 @@
             src="./public/_ (1).jpeg"
             alt=""
             height="600px" />
+          <div class="caption">Тело. Депеляция</div>
         </a>
 
         <a class="item item__container" href="priceBody.html">
@@ -139,6 +134,7 @@
             src="./public/_.jpeg"
             alt=""
             height="600px" />
+          <div class="caption">Тело. SPA</div>
         </a>
         <a class="item item__container" href="nail.html">
           <img
@@ -146,6 +142,7 @@
             src="./public/Women's ready to wear clothes made in USA using technical fabrics.jpeg"
             alt=""
             height="600px" />
+          <div class="caption">Маникюр Педикюр</div>
         </a>
       </div>
     </section>
