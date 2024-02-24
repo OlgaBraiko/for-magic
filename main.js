@@ -1,9 +1,6 @@
-//
 document.addEventListener("DOMContentLoaded", function () {
   const menuItems = document.querySelector(".navbar");
   const dropdown = document.querySelector(".dropdown");
-
-  // Скрываем выпадающий список по умолчанию
 
   // Отображаем выпадающий список при наведении на третий пункт меню
   menuItems[3].addEventListener("mouseover", function () {
@@ -28,9 +25,6 @@ window.addEventListener("scroll", function () {
       currentIdx = idx;
     }
   });
-
-  // const currentItem = gridItems[currentIdx];
-  // const rect = currentItem.getBoundingClientRect(); //error
 });
 
 // скролл к услугам
@@ -85,7 +79,6 @@ function prevImage() {
   showImage(currentImageIndex);
 }
 
-// Показываем первое изображение при загрузке страницы
 showImage(currentImageIndex);
 
 // Автоматическое листание изображений
@@ -118,10 +111,6 @@ images1.forEach((image) => {
     }, 500); // Ждем 500 миллисекунд (время анимации) перед загрузкой нового изображения
   });
 });
-
-// бургер
-
-//   дропдаун!!!!!!
 
 document
   .querySelector(".dropdown-trigger")
@@ -189,3 +178,33 @@ function callPhoneNumber() {
 function openLink(url) {
   window.open(url, "_blank");
 }
+
+// дропдаун в медиа
+
+// const dropdown = document.getElementById("dropdown1");
+
+// document.querySelector(".burger-menu").addEventListener("click", () => {
+//   if (dropdown.style.display === "none" || dropdown.style.display === "") {
+//     dropdown.style.display = "block";
+//   } else {
+//     dropdown.style.display = "none";
+//   }
+// });
+
+// window.addEventListener("click", (event) => {
+//   if (
+//     !event.target.matches(".burger-menu") &&
+//     !event.target.matches("#dropdown1")
+//   ) {
+//     dropdown.style.display = "none";
+//   }
+// });
+
+// document.querySelector(".burger-menu").addEventListener("click", function () {
+//   const dropdown = document.querySelectorAll("dropdown1");
+//   if (dropdown.style.display === "none" || dropdown.style.display === "") {
+//     dropdown.style.display = "block";
+//   } else {
+//     dropdown.style.display = "none";
+//   }
+// });
