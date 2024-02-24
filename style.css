@@ -49,8 +49,15 @@ header {
   margin: 0 50px;
 }
 
-.menu li:hover {
+.menu li:hover,
+li a:hover {
   color: red;
+}
+li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 /* dropdown */
@@ -276,6 +283,16 @@ h1 {
 
 .item__details {
   max-width: 100%;
+}
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+  text-align: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -662,7 +679,7 @@ header {
   }
 
   .about-us-text {
-    font-size: 20px;
+    font-size: 16px;
   }
   .about__title {
     font-size: 25px;

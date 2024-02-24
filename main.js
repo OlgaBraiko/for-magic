@@ -3,44 +3,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const dropdown = document.querySelector(".dropdown1");
 
   // Отображаем выпадающий список при наведении на третий пункт меню
-  menuItems[3]?.addEventListener("mouseover", function () {
+  menuItems[2]?.addEventListener("mouseover", function () {
     dropdown.style.display = "block";
   });
 
   // Скрываем выпадающий список при уходе курсора с третьего пункта меню
-  menuItems[3]?.addEventListener("mouseout", function () {
+  menuItems[2]?.addEventListener("mouseout", function () {
     dropdown.style.display = "none";
   });
 });
 
-// scroll btn
-window.addEventListener("scroll", function () {
-  const scrollBtn = document.querySelector(".hover-btn");
-  const gridItems = document.querySelectorAll(".grid-item");
-
-  let currentIdx = 0;
-  gridItems.forEach((item, idx) => {
-    const rect = item.getBoundingClientRect();
-    if (rect.top < window.innerHeight / 2) {
-      currentIdx = idx;
-    }
-  });
-});
-
 // скролл к услугам
-document.addEventListener("DOMContentLoaded", () => {
-  const scrollLinks = document.querySelectorAll(".scroll-link");
-  scrollLinks.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      const targetPosition = window.scrollY + 1200;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth", // Добавляем плавную анимацию
-      });
-    });
-  });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollAbout = document.querySelector(".scroll-about");
@@ -112,27 +85,27 @@ images1.forEach((image) => {
   });
 });
 
-document
-  .querySelector(".dropdown-trigger")
-  .addEventListener("click", function () {
-    if (window.innerWidth <= 900) {
-      window.scrollBy(0, 1300);
-      window.scrollBy({
-        top: 500,
-        behavior: "smooth",
-      });
-    }
-  });
+// document
+//   .querySelector(".dropdown-trigger")
+//   .addEventListener("click", function () {
+//     if (window.innerWidth <= 900) {
+//       window.scrollBy(0, 1300);
+//       window.scrollBy({
+//         top: 500,
+//         behavior: "smooth",
+//       });
+//     }
+//   });
 
 // WhatsApp
-document
-  .getElementById("openModalButton2")
-  .addEventListener("click", function () {
-    window.location.href = "https://wa.me/79340000384";
-  });
-function openWorkWats() {
-  window.location.href = "https://wa.me/79340000384";
-}
+// document
+//   .getElementById("openModalButton2")
+//   .addEventListener("click", function () {
+//     window.location.href = "https://wa.me/79340000384";
+//   });
+// function openWorkWats() {
+//   window.location.href = "https://wa.me/79340000384";
+// }
 
 // кнопка отзывы салон
 
