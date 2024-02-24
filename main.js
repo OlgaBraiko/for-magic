@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const menuItems = document.querySelector(".navbar");
+  const menuItems = document.querySelectorAll(".navbar .menu1 > li");
   const dropdown = document.querySelector(".dropdown");
 
   // Отображаем выпадающий список при наведении на третий пункт меню
-  menuItems[3].addEventListener("mouseover", function () {
+  menuItems[3]?.addEventListener("mouseover", function () {
     dropdown.style.display = "block";
   });
 
   // Скрываем выпадающий список при уходе курсора с третьего пункта меню
-  menuItems[3].addEventListener("mouseout", function () {
+  menuItems[3]?.addEventListener("mouseout", function () {
     dropdown.style.display = "none";
   });
 });
@@ -148,26 +148,6 @@ document.querySelector(".feed-btn2").addEventListener("click", (e) => {
     "https://zoon.ru/msk/beauty/salon_krasoty_magiya_iskusstva/#reviews";
 });
 
-// переключаем на страницу прайс
-
-function redirectToPricePageForm() {
-  window.location.href = "./hair.html";
-}
-function redirectToPricePageNail() {
-  window.location.href = "./nail.html";
-}
-function redirectToPricePageDepelition() {
-  window.location.href = "./depel.html";
-}
-function redirectToPricePageFace() {
-  window.location.href = "./face.html";
-}
-function redirectToPricePageBody() {
-  window.location.href = "./priceBody.html";
-}
-function redirectToPricePageMakeUp() {
-  window.location.href = "./makeup.html";
-}
 // звонок на номер
 
 function callPhoneNumber() {

@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./fonts/font/MullerBlackItalic.woff2" />
 
     <title>Magiskus</title>
   </head>
@@ -13,7 +12,7 @@
       <div class="left-column">
         <div class="contact-info">
           <p>Адрес: ул. Говорова, 2А</p>
-          <p onclick="callPhoneNumber()">Телефон: +7 (934) 000-0384</p>
+          <a href="tel:+79340000384">Телефон: +7 (934) 000-0384</a>
           <div class="social-media-icons"></div>
         </div>
       </div>
@@ -107,24 +106,47 @@
     <div class="message"></div>
     <section class="section">
       <div class="grid">
-        <div class="item item--large" onclick="redirectToPricePageForm()">
-          <div class="item__details">Волосы Форма Стиль</div>
-        </div>
-        <div class="item item--large" onclick="redirectToPricePageMakeUp()">
-          <div class="item__details">Лицо Брови Ресницы make-up</div>
-        </div>
-        <div class="item item--large" onclick="redirectToPricePageDepelition()">
-          <div class="item__details">Тело Депиляция</div>
-        </div>
-        <div class="item item--medium" onclick="redirectToPricePageFace()">
-          <div class="item__details">Лицо Уход Пилинги</div>
-        </div>
-        <div class="item item--large" onclick="redirectToPricePageBody()">
-          <div class="item__details">Тело</div>
-        </div>
-        <div class="item item--medium" onclick="redirectToPricePageNail()">
-          <div class="item__details">Маникюр Педикюр</div>
-        </div>
+        <a class="item item__container" href="hair.html">
+          <img
+            class="item__details"
+            src="./public/IMAGE 2024-01-23 11:16:07.jpg"
+            alt="" />
+        </a>
+        <a class="item item__container" href="makeup.html">
+          <img
+            class="item__details"
+            src="./public/IMAGE 2024-01-23 11:19:05.jpg"
+            alt="" />
+        </a>
+        <a class="item item__container" href="face.html">
+          <img
+            class="item__details"
+            src="./public/Снимок экрана 2024-01-25 в 22.03.12.png"
+            alt=""
+            height="420" />
+        </a>
+        <a class="item item__container" href="depel.html">
+          <img
+            class="item__details"
+            src="./public/_ (1).jpeg"
+            alt=""
+            height="600px" />
+        </a>
+
+        <a class="item item__container" href="priceBody.html">
+          <img
+            class="item__details"
+            src="./public/_.jpeg"
+            alt=""
+            height="600px" />
+        </a>
+        <a class="item item__container" href="nail.html">
+          <img
+            class="item__details"
+            src="./public/Women's ready to wear clothes made in USA using technical fabrics.jpeg"
+            alt=""
+            height="600px" />
+        </a>
       </div>
     </section>
 
