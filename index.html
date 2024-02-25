@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-
     <title>Magiskus</title>
 
     <script type="module" src="./slider.js" defer></script>
@@ -16,7 +15,9 @@
       <div class="left-column">
         <div class="contact-info">
           <p>Адрес: ул. Говорова, 2А</p>
-          <a href="tel:+79340000384">Телефон: +7 (934) 000-0384</a>
+          <a class="link-phone" href="tel:+79340000384"
+            >Телефон: +7 (934) 000-0384</a
+          >
           <div class="social-media-icons"></div>
         </div>
       </div>
@@ -30,33 +31,22 @@
       <div class="right-column">
         <div class="contact-info">
           <!-- Иконки социальных сетей -->
-          <img
-            src="./public/иконка.jpeg"
-            alt="Telegram"
-            class="social-icon"
-            onclick="openLink( )" />
-          <img
-            src="./public/иконка вк.svg"
-            alt="VKontakte"
-            class="social-icon"
-            onclick="openLink( )" />
+          <a href="https://t.me/magiyaiskusstva">
+            <img
+              src="./public/иконка.jpeg"
+              alt="Telegram"
+              class="social-icon" />
+          </a>
+
+          <a href="https://vk.com/magiskus">
+            <img
+              src="./public/иконка вк.svg"
+              alt="VKontakte"
+              class="social-icon" />
+          </a>
         </div>
       </div>
     </header>
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Введите ваш номер телефона</h2>
-        <form id="phoneForm">
-          <input
-            type="tel"
-            id="phoneNumber"
-            placeholder="Номер телефона"
-            required />
-          <button type="submit">Отправить</button>
-        </form>
-      </div>
-    </div>
 
     <div class="menu">
       <div class="navbar">
@@ -66,15 +56,21 @@
           <li class="dropdown-trigger">
             Я Хочу
             <ul class="dropdown1">
-              <li><a href="#" class="scroll-link">Укладку</a></li>
-              <li><a href="#" class="scroll-link">Гладкую кожу</a></li>
-              <li><a href="#" class="scroll-link">Маникюр</a></li>
-              <li><a href="#" class="scroll-link">Идеальную фигуру</a></li>
-              <li><a href="#" class="scroll-link">Подтянутый овал лица</a></li>
+              <li><a href="hair.html" class="scroll-link">Укладку</a></li>
+              <li><a href="face.html" class="scroll-link">Гладкую кожу</a></li>
+              <li><a href="nail.html" class="scroll-link">Маникюр</a></li>
+              <li>
+                <a href="priceBody.html" class="scroll-link"
+                  >Идеальную фигуру</a
+                >
+              </li>
+              <li>
+                <a href="face.html" class="scroll-link">Подтянутый овал лица</a>
+              </li>
             </ul>
           </li>
-          <li>Мы В Медиа</li>
-          <li onclick="openWorkWats()" id="work-link">Хочу У Вас Работать</li>
+          <!-- <li>Мы В Медиа</li> -->
+          <li><a href="tel:+79340000384"> Хочу У Вас Работать </a></li>
         </ul>
 
         <div class="burger-menu">
@@ -85,49 +81,72 @@
       </div>
     </div>
     <div class="gallery">
-      <img src="./public/ставить2.jpeg" alt="Photo 1" />
-      <img class="foto" src="./public/ставить.jpeg" alt="Photo 1" />
+      <img class="gallery-photo" src="./public/ставить2.jpeg" alt="Photo 1" />
+      <img class="gallery-photo" src="./public/ставить.jpeg" alt="Photo 1" />
       <button class="prev">Назад</button>
       <button class="next">Вперед</button>
     </div>
     <div class="fixed-buttons">
-      <button class="button" id="openModalButton">Онлайн-запись</button>
+      <button class="button">
+        <a
+          class="link-yaclains"
+          href="https://n658782.yclients.com/company/623052/menu?_gl=1*1hdjhbx*_ga*MTg1MjI1OTc3NS4xNzA4ODQ5ODQ5*_ga_P2LM7D8KSM*MTcwODg1MzMwMS4yLjEuMTcwODg1MzMwNC41Ny4wLjA.&_ga=2.199457070.1895848680.1708849849-1852259775.1708849849&o="
+          >Онлайн запись</a
+        >
+      </button>
       <button class="button" id="openModalButton2">Закажи звонок</button>
-    </div>
-
-    <div class="modal" id="modal">
-      <div class="modal-content">
-        <h2>Оставьте ваш номер телефона</h2>
-        <input
-          class="formNum"
-          type="text"
-          id="phoneNumber"
-          placeholder="Введите номер телефона" />
-        <button id="callMeButton">Перезвоните мне</button>
-      </div>
     </div>
 
     <div class="message"></div>
     <section class="section">
       <div class="grid">
-        <a class="item item--large" href="hair.html">
-          <div class="item__details">Волосы Форма Стиль</div>
+        <a class="item item__container" href="hair.html">
+          <img
+            class="item__details"
+            src="./public/IMAGE 2024-01-23 11:16:07.jpg"
+            alt="" />
+          <div class="caption">Волосы форма стиль цвет</div>
         </a>
-        <a class="item item--large" onclick="redirectToPricePageMakeUp()">
-          <div class="item__details">Лицо Брови Ресницы make-up</div>
+        <a class="item item__container" href="makeup.html">
+          <img
+            class="item__details"
+            src="./public/IMAGE 2024-01-23 11:19:05.jpg"
+            alt="" />
+          <div class="caption">Лицо брови make-up</div>
         </a>
-        <div class="item item--large" onclick="redirectToPricePageDepelition()">
-          <div class="item__details">Тело Депиляция</div>
-        </div>
-        <div class="item item--medium" onclick="redirectToPricePageFace()">
-          <div class="item__details">Лицо Уход Пилинги</div>
-        </div>
-        <div class="item item--large" onclick="redirectToPricePageBody()">
-          <div class="item__details">Тело</div>
-        </div>
-        <div class="item item--medium" onclick="redirectToPricePageNail()">
-          <div class="item__details">Маникюр Педикюр</div>
-        </div>
+        <a class="item item__container" href="face.html">
+          <img
+            class="item__details"
+            src="./public/Снимок экрана 2024-01-25 в 22.03.12.png"
+            alt=""
+            height="420" />
+          <div class="caption">Лицо. Уход.Пилинги.Массаж</div>
+        </a>
+        <a class="item item__container" href="depel.html">
+          <img
+            class="item__details"
+            src="./public/_ (1).jpeg"
+            alt=""
+            height="600px" />
+          <div class="caption">Тело. Депеляция</div>
+        </a>
+
+        <a class="item item__container" href="priceBody.html">
+          <img
+            class="item__details"
+            src="./public/_.jpeg"
+            alt=""
+            height="600px" />
+          <div class="caption">Тело. SPA</div>
+        </a>
+        <a class="item item__container" href="nail.html">
+          <img
+            class="item__details"
+            src="./public/Women's ready to wear clothes made in USA using technical fabrics.jpeg"
+            alt=""
+            height="600px" />
+          <div class="caption">Маникюр Педикюр</div>
+        </a>
       </div>
     </section>
 
@@ -135,46 +154,64 @@
       <h2 class="title__feedbek">ОТЗЫВЫ</h2>
       <div class="form-wrap">
         <form class="form-feed">
-          <button class="feed-btn">Оставить отзыв Яндекс</button>
+          <button class="feed-btn">
+            <a
+              href="https://yandex.ru/maps/org/magiya_iskusstva/1006427653/reviews/?ll=37.281546%2C55.685137&z=14"
+              >Оставить отзыв Яндекс</a
+            >
+          </button>
         </form>
         <form class="form-feed2">
-          <button class="feed-btn2">Оставить отзыв Zoon</button>
+          <button class="feed-btn2">
+            <a
+              href="https://zoon.ru/msk/beauty/salon_krasoty_magiya_iskusstva/#reviews"
+              >Оставить отзыв Zoon</a
+            >
+          </button>
         </form>
       </div>
 
       <div class="wrapp">
         <div class="wrapp__image">
           <img
+            class="image-feed"
             src="./public/Снимок экрана 2024-01-27 в 16.42.38.png"
-            width="600px"
-            height="500px"
+            width="400px"
+            height="400px"
             alt="" />
         </div>
         <div class="wrapp__image">
           <img
+            class="image-feed"
             src="./public/Снимок экрана 2024-01-27 в 16.40.35.png"
-            width="600px"
-            height="500px"
+            width="400px"
+            height="400px"
             alt="" />
         </div>
       </div>
     </div>
+
     <h2 class="about__title">О Нас</h2>
     <div class="about-us">
       <img
+        class="image-us"
         src="./public/Снимок экрана 2024-02-03 в 14.20.12.png"
         alt="Фото О Нас" />
-      <p class="about-us-text">
-        Приглашаем вас окунуться в мир настоящей красоты и ухода в "Магии
-        Искусства", где каждый посетитель становится главным героем своей
-        собственной истории преображения.
-      </p>
+      <div class="container-text">
+        <p class="about-us-text">
+          Приглашаем вас окунуться в мир настоящей красоты и ухода в "Магии
+          Искусства", где каждый посетитель становится главным героем своей
+          собственной истории преображения.
+        </p>
+      </div>
     </div>
     <footer>
       <div class="contact-info">
         <h3>Контакты</h3>
         <p>Адрес: ул. Говорова, д. 2А, г. Одинцово</p>
-        <p onclick="callPhoneNumber()">Телефон: +7 (934) 000-0384</p>
+        <a class="link-phone-footer" href="tel:+79340000384"
+          >Телефон: +7 (934) 000-0384</a
+        >
         <p>График работы: Пн-Вс: 9:00-21:00</p>
       </div>
       <div class="photo">
@@ -186,4 +223,6 @@
       </div>
     </footer>
   </body>
+
+  <script src="./main.js"></script>
 </html>

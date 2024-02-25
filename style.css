@@ -49,8 +49,19 @@ header {
   margin: 0 50px;
 }
 
-.menu li:hover {
+.menu li:hover,
+li a:hover {
   color: red;
+}
+li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.link-phone {
+  text-decoration: none;
+  color: black;
 }
 
 /* dropdown */
@@ -73,7 +84,7 @@ header {
   display: block;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .menu1 .dropdown-trigger:hover .dropdown1 {
     display: none;
   }
@@ -235,13 +246,13 @@ h1 {
   margin: 0 0 1.5em;
 }
 
+/* грид */
+
 .grid {
   display: grid;
-  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 
-  grid-template-columns: repeat(2, 3fr);
-
-  grid-auto-rows: 150px;
   grid-auto-flow: row dense;
 }
 
@@ -251,12 +262,6 @@ h1 {
   flex-direction: column;
   justify-content: flex-end;
   box-sizing: border-box;
-  background: #0c9a9a;
-  color: #fff;
-  grid-column-start: auto;
-  grid-row-start: auto;
-  color: #fff;
-  background: url("../IMAGE\ 2024-01-23\ 11:16:07.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
@@ -264,25 +269,7 @@ h1 {
   cursor: pointer;
   counter-increment: item-counter;
 }
-.item:nth-of-type(2n) {
-  background-image: url("../IMAGE\ 2024-01-23\ 11:19:05.jpg");
-}
-.item:nth-of-type(3n) {
-  background-image: url("../_\ \(1\).jpeg");
-}
-.item:nth-of-type(4n) {
-  background-image: url("../Снимок\ экрана\ 2024-01-25\ в\ 22.03.12.png");
-}
-.item:nth-of-type(5n) {
-  background-image: url("../_.jpeg"); /*good*/
-}
-.item:nth-of-type(6n) {
-  background-image: url("../Women's\ ready\ to\ wear\ clothes\ made\ in\ USA\ using\ technical\ fabrics.jpeg");
-}
-.item:nth-of-type(7n) {
-  background-image: url();
-}
-.item:after {
+.item::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -297,40 +284,25 @@ h1 {
 .item:hover:after {
   opacity: 0;
 }
-.item--medium {
-  grid-row-end: span 2;
-}
-.item--large {
-  grid-row-end: span 3;
-}
-.item--full {
-  grid-column-end: auto;
-}
-@media screen and (min-width: 768px) {
-  .item--full {
-    grid-column: 1/-1;
-    grid-row-end: span 2;
-  }
-}
-.item__details {
-  position: relative;
-  z-index: 1;
-  padding: 5px;
-  color: #fff;
-  text-transform: lowercase;
-  font-weight: 500;
-  font-size: 16px;
-  background: #000;
 
-  letter-spacing: 1px;
-  color: #fff;
+.item__details {
+  max-width: 100%;
 }
-.item__details:before {
-  content: counter(item-counter);
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding-right: 0.5em;
-  color: #000;
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* бургер */
@@ -380,8 +352,12 @@ h1 {
   display: none;
   cursor: pointer;
 }
+.link-yaclains {
+  text-decoration: none;
+  color: #fff;
+}
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .navbar ul {
     display: none;
     flex-direction: column;
@@ -443,8 +419,11 @@ h1 {
   justify-content: stretch;
   align-items: center;
 }
-.feed-btn {
+.feed-btn a,
+.feed-btn2 a {
   border: none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .feed-btn:hover,
@@ -486,7 +465,10 @@ footer {
   width: 50%;
   margin: 100px;
 }
-
+.link-phone-footer {
+  text-decoration: none;
+  color: #fff;
+}
 .photo {
   width: 50%;
   margin: 100px;
@@ -551,7 +533,7 @@ header {
   display: block;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   .menu1 ul {
     flex-direction: column; /* Изменяем направление на колонку */
     align-items: center; /* Выравниваем по центру */
@@ -561,6 +543,10 @@ header {
     margin: 10px 0; /* Добавляем отступы сверху и снизу */
     font-size: 16px; /* Возвращаем обычный размер шрифта */
     display: none;
+  }
+
+  .fixed-buttons {
+    margin-bottom: 80px;
   }
 
   .dropdown1 {
@@ -619,17 +605,6 @@ header {
   right: 10px;
 }
 
-/* modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 228, 225, 0.5); /* Нежный цвет фона */
-}
 /* соц сети */
 .social-icons {
   display: flex;
@@ -668,61 +643,81 @@ header {
   font-size: 16px;
 }
 
-/* медиа запросы шапка */
+/* медиа запросы   */
 
-@media (max-width: 800px) {
+@media screen and (max-width: 900px) {
   body {
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   .wrapp {
-    min-width: 100%;
+    width: 100%;
   }
-
+  .container__feedbek {
+    max-width: 300px;
+    padding-left: 0;
+    padding-right: 0;
+  }
   .section {
     margin-top: -110px;
+    width: 400px;
   }
+  .title__feedbek {
+    margin-left: 80px;
+  }
+
   .wrapp {
     flex-direction: column;
     align-items: center;
   }
+  .form-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
 
-  .form-feed {
-    margin-left: 120px;
+    max-height: fit-content;
   }
-
-  .form-feed2 {
-    margin-left: 120px;
-  }
-
   .feed-btn {
-    margin-right: 10px;
+    margin-right: 35px;
   }
+  .item__details {
+    max-height: 400px;
+  }
+  .form-feed {
+    margin-left: 100px;
+  }
+
+  .image-feed {
+    width: 450px;
+  }
+  .wrapp__image {
+    max-width: 350px;
+    max-height: 350px;
+  }
+
   .photo {
     display: none;
   }
-  footer {
-    background-color: #333232;
-    color: #ccc;
-    margin-top: 20px;
-  }
+
   .about-us {
-    padding-left: 20px;
+    padding-left: 50px;
+    width: 300px;
   }
 
   .about-us-text {
-    font-size: 20px;
+    font-size: 16px;
   }
   .about__title {
     font-size: 25px;
   }
-}
 
-/* Медиа-запрос для мобильных устройств до 950px */
-@media (max-width: 800) {
   header {
     flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
-    padding: 10px; /* Уменьшаем отступы */
+    padding: 0px;
   }
 
   .left-column,
@@ -735,30 +730,310 @@ header {
     flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
     text-align: center; /* Выравниваем текст по центру */
     margin-top: 10px; /* Добавляем отступ сверху */
+    max-width: 750px;
   }
 
   .contact-info {
     margin-right: 0; /* Убираем отступ справа */
     margin-bottom: 10px; /* Добавляем отступ снизу */
+    padding-bottom: 30px;
   }
 
   .social-media-icons {
     margin-bottom: 10px; /* Добавляем отступ снизу */
   }
-}
-.menu ul {
-  list-style-type: none;
-  display: flex; /* Добавляем flex для пунктов меню */
-  justify-content: center; /* Выравниваем пункты по центру */
-  padding: 0;
-  margin: 0;
+
+  .menu ul {
+    list-style-type: none;
+    display: flex; /* Добавляем flex для пунктов меню */
+    justify-content: center; /* Выравниваем пункты по центру */
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    margin: 0 20px; /* Уменьшаем отступы между пунктами */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
+  .menu li:hover {
+    color: red;
+  }
+
+  .wrapp {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery {
+    height: 500px;
+    width: 400px;
+  }
+
+  .form-wrap {
+    max-width: 400px;
+    max-height: fit-content;
+  }
+  .item__details {
+    max-height: 400px;
+  }
+  .form-feed {
+    margin-left: 100px;
+  }
+
+  .form-feed2 {
+    margin-left: 60px;
+  }
+
+  .photo {
+    display: none;
+  }
+  footer {
+    background-color: #333232;
+    color: #ccc;
+    margin-top: 20px;
+    width: 450px;
+    box-sizing: border-box;
+  }
+
+  .about-us-text {
+    font-size: 14px;
+  }
+  .about__title {
+    font-size: 25px;
+  }
+  .image-us {
+    width: 300px;
+    height: 300px;
+  }
+  .container-text {
+    width: 400px;
+  }
+  .button {
+    margin-right: 55px;
+  }
+  .left-column,
+  .right-column {
+    font-size: 10px; /* Уменьшаем размер шрифта */
+  }
+
+  .contact-info {
+    margin-right: 0; /* Убираем отступ справа */
+    margin-bottom: 10px; /* Добавляем отступ снизу */
+    padding-bottom: 200px;
+    padding-right: 50px;
+  }
+
+  .menu ul {
+    list-style-type: none;
+    display: flex; /* Добавляем flex для пунктов меню */
+    justify-content: center; /* Выравниваем пункты по центру */
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    margin: 0 20px; /* Уменьшаем отступы между пунктами */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
+  .menu li:hover {
+    color: red;
+  }
 }
 
-.menu li {
-  margin: 0 20px; /* Уменьшаем отступы между пунктами */
-  font-size: 14px; /* Уменьшаем размер шрифта */
-}
+@media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-.menu li:hover {
-  color: red;
+  .wrapp {
+    width: 100%;
+  }
+  .container__feedbek {
+    max-width: 300px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about-us {
+    padding-left: 50px;
+    width: 300px;
+  }
+  .section {
+    margin-top: -110px;
+    width: 350px;
+  }
+  .title__feedbek {
+    margin-left: 80px;
+  }
+
+  .wrapp {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+
+    max-height: fit-content;
+  }
+  .feed-btn {
+    margin-right: 35px;
+  }
+  .item__details {
+    max-height: 400px;
+  }
+  .form-feed {
+    margin-left: 100px;
+  }
+
+  .image-feed {
+    width: 450px;
+  }
+  .wrapp__image {
+    max-width: 400px;
+    max-height: 350px;
+  }
+
+  .photo {
+    display: none;
+  }
+
+  .about-us-text {
+    font-size: 12px;
+  }
+  .about__title {
+    font-size: 25px;
+  }
+
+  header {
+    flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
+    padding: 0px;
+  }
+
+  .left-column,
+  .right-column {
+    font-size: 10px; /* Уменьшаем размер шрифта */
+  }
+
+  .menu {
+    height: auto; /* Устанавливаем высоту меню по содержимому */
+    flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
+    text-align: center; /* Выравниваем текст по центру */
+    margin-top: 10px; /* Добавляем отступ сверху */
+    max-width: 750px;
+  }
+
+  .contact-info {
+    margin-right: 0; /* Убираем отступ справа */
+    margin-bottom: 10px; /* Добавляем отступ снизу */
+    padding-bottom: 30px;
+  }
+
+  .social-media-icons {
+    margin-bottom: 10px; /* Добавляем отступ снизу */
+  }
+
+  .menu ul {
+    list-style-type: none;
+    display: flex; /* Добавляем flex для пунктов меню */
+    justify-content: center; /* Выравниваем пункты по центру */
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    margin: 0 20px; /* Уменьшаем отступы между пунктами */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
+  .menu li:hover {
+    color: red;
+  }
+
+  .wrapp {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery {
+    height: 500px;
+    width: 400px;
+  }
+
+  .form-wrap {
+    max-width: 400px;
+    max-height: fit-content;
+  }
+  .item__details {
+    max-height: 400px;
+  }
+  .form-feed {
+    margin-left: 100px;
+  }
+
+  .form-feed2 {
+    margin-left: 60px;
+  }
+
+  .photo {
+    display: none;
+  }
+  footer {
+    background-color: #333232;
+    color: #ccc;
+    margin-top: 20px;
+    width: 400px;
+    box-sizing: border-box;
+  }
+
+  .about-us-text {
+    font-size: 14px;
+  }
+  .about__title {
+    font-size: 25px;
+  }
+  .image-us {
+    width: 300px;
+    height: 300px;
+  }
+  .container-text {
+    width: 400px;
+  }
+  .button {
+    margin-right: 55px;
+  }
+  .left-column,
+  .right-column {
+    font-size: 10px; /* Уменьшаем размер шрифта */
+  }
+
+  .contact-info {
+    margin-right: 0; /* Убираем отступ справа */
+    margin-bottom: 10px; /* Добавляем отступ снизу */
+    padding-bottom: 200px;
+    padding-right: 50px;
+  }
+
+  .menu ul {
+    list-style-type: none;
+    display: flex; /* Добавляем flex для пунктов меню */
+    justify-content: center; /* Выравниваем пункты по центру */
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    margin: 0 20px; /* Уменьшаем отступы между пунктами */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
+  .menu li:hover {
+    color: red;
+  }
 }
