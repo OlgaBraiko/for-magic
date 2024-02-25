@@ -85,27 +85,15 @@ images1.forEach((image) => {
   });
 });
 
-// document
-//   .querySelector(".dropdown-trigger")
-//   .addEventListener("click", function () {
-//     if (window.innerWidth <= 900) {
-//       window.scrollBy(0, 1300);
-//       window.scrollBy({
-//         top: 500,
-//         behavior: "smooth",
-//       });
-//     }
-//   });
-
-// WhatsApp
-// document
-//   .getElementById("openModalButton2")
-//   .addEventListener("click", function () {
-//     window.location.href = "https://wa.me/79340000384";
-//   });
-// function openWorkWats() {
-//   window.location.href = "https://wa.me/79340000384";
-// }
+// WhatsApp;
+document
+  .getElementById("openModalButton2")
+  .addEventListener("click", function () {
+    window.location.href = "https://wa.me/79340000384";
+  });
+function openWorkWats() {
+  window.location.href = "https://wa.me/79340000384";
+}
 
 // кнопка отзывы салон
 
@@ -120,40 +108,3 @@ document.querySelector(".feed-btn2").addEventListener("click", (e) => {
   window.location.href =
     "https://zoon.ru/msk/beauty/salon_krasoty_magiya_iskusstva/#reviews";
 });
-
-// звонок на номер
-
-//  соц сети
-function openLink(url) {
-  window.open(url, "_blank");
-}
-
-// дропдаун в медиа
-
-// const dropdown = document.getElementById("dropdown1");
-
-// document.querySelector(".burger-menu").addEventListener("click", () => {
-//   if (dropdown.style.display === "none" || dropdown.style.display === "") {
-//     dropdown.style.display = "block";
-//   } else {
-//     dropdown.style.display = "none";
-//   }
-// });
-
-// window.addEventListener("click", (event) => {
-//   if (
-//     !event.target.matches(".burger-menu") &&
-//     !event.target.matches("#dropdown1")
-//   ) {
-//     dropdown.style.display = "none";
-//   }
-// });
-
-// document.querySelector(".burger-menu").addEventListener("click", function () {
-//   const dropdown = document.querySelectorAll("dropdown1");
-//   if (dropdown.style.display === "none" || dropdown.style.display === "") {
-//     dropdown.style.display = "block";
-//   } else {
-//     dropdown.style.display = "none";
-//   }
-// });

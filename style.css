@@ -59,6 +59,10 @@ li a {
   padding: 5px 10px;
   border-radius: 5px;
 }
+.link-phone {
+  text-decoration: none;
+  color: black;
+}
 
 /* dropdown */
 
@@ -654,7 +658,13 @@ header {
     flex-direction: column;
     align-items: center;
   }
-
+  .form-wrap {
+    max-width: 400px;
+    max-height: fit-content;
+  }
+  .item__details {
+    max-height: 400px;
+  }
   .form-feed {
     margin-left: 100px;
   }
@@ -690,7 +700,7 @@ header {
 @media (max-width: 800) {
   header {
     flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
-    padding: 10px; /* Уменьшаем отступы */
+    padding: 0px;
   }
 
   .left-column,
@@ -703,6 +713,7 @@ header {
     flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
     text-align: center; /* Выравниваем текст по центру */
     margin-top: 10px; /* Добавляем отступ сверху */
+    max-width: 750px;
   }
 
   .contact-info {
@@ -713,20 +724,26 @@ header {
   .social-media-icons {
     margin-bottom: 10px; /* Добавляем отступ снизу */
   }
-}
-.menu ul {
-  list-style-type: none;
-  display: flex; /* Добавляем flex для пунктов меню */
-  justify-content: center; /* Выравниваем пункты по центру */
-  padding: 0;
-  margin: 0;
-}
 
-.menu li {
-  margin: 0 20px; /* Уменьшаем отступы между пунктами */
-  font-size: 14px; /* Уменьшаем размер шрифта */
-}
+  .menu ul {
+    list-style-type: none;
+    display: flex; /* Добавляем flex для пунктов меню */
+    justify-content: center; /* Выравниваем пункты по центру */
+    padding: 0;
+    margin: 0;
+  }
 
-.menu li:hover {
-  color: red;
+  .menu li {
+    margin: 0 20px; /* Уменьшаем отступы между пунктами */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
+  .menu li:hover {
+    color: red;
+  }
+
+  .wrapp__image {
+    max-width: 350px;
+    max-height: 350px;
+  }
 }
