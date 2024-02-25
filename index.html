@@ -77,15 +77,16 @@
       </div>
     </div>
     <div class="gallery">
-      <img src="./public/ставить2.jpeg" alt="Photo 1" />
-      <img class="foto" src="./public/ставить.jpeg" alt="Photo 1" />
+      <img class="gallery-photo" src="./public/ставить2.jpeg" alt="Photo 1" />
+      <img class="gallery-photo" src="./public/ставить.jpeg" alt="Photo 1" />
       <button class="prev">Назад</button>
       <button class="next">Вперед</button>
     </div>
     <div class="fixed-buttons">
       <button class="button">
         <a
-          href="https://yandex.ru/maps/org/magiya_iskusstva/1006427653/?booking%5Bpage%5D=services&booking%5Bpermalink%5D=1006427653&ll=37.281602%2C55.685056&z=16"
+          class="link-yaclains"
+          href="https://n658782.yclients.com/company/623052/menu?_gl=1*1hdjhbx*_ga*MTg1MjI1OTc3NS4xNzA4ODQ5ODQ5*_ga_P2LM7D8KSM*MTcwODg1MzMwMS4yLjEuMTcwODg1MzMwNC41Ny4wLjA.&_ga=2.199457070.1895848680.1708849849-1852259775.1708849849&o="
           >Онлайн запись</a
         >
       </button>
@@ -169,36 +170,44 @@
       <div class="wrapp">
         <div class="wrapp__image">
           <img
+            class="image-feed"
             src="./public/Снимок экрана 2024-01-27 в 16.42.38.png"
-            width="600px"
-            height="500px"
+            width="400px"
+            height="400px"
             alt="" />
         </div>
         <div class="wrapp__image">
           <img
+            class="image-feed"
             src="./public/Снимок экрана 2024-01-27 в 16.40.35.png"
-            width="600px"
-            height="500px"
+            width="400px"
+            height="400px"
             alt="" />
         </div>
       </div>
     </div>
+
     <h2 class="about__title">О Нас</h2>
     <div class="about-us">
       <img
+        class="image-us"
         src="./public/Снимок экрана 2024-02-03 в 14.20.12.png"
         alt="Фото О Нас" />
-      <p class="about-us-text">
-        Приглашаем вас окунуться в мир настоящей красоты и ухода в "Магии
-        Искусства", где каждый посетитель становится главным героем своей
-        собственной истории преображения.
-      </p>
+      <div class="container-text">
+        <p class="about-us-text">
+          Приглашаем вас окунуться в мир настоящей красоты и ухода в "Магии
+          Искусства", где каждый посетитель становится главным героем своей
+          собственной истории преображения.
+        </p>
+      </div>
     </div>
     <footer>
       <div class="contact-info">
         <h3>Контакты</h3>
         <p>Адрес: ул. Говорова, д. 2А, г. Одинцово</p>
-        <p onclick="callPhoneNumber()">Телефон: +7 (934) 000-0384</p>
+        <a class="link-phone-footer" href="tel:+79340000384"
+          >Телефон: +7 (934) 000-0384</a
+        >
         <p>График работы: Пн-Вс: 9:00-21:00</p>
       </div>
       <div class="photo">
