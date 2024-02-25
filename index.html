@@ -11,7 +11,9 @@
       <div class="left-column">
         <div class="contact-info">
           <p>Адрес: ул. Говорова, 2А</p>
-          <a href="tel:+79340000384">Телефон: +7 (934) 000-0384</a>
+          <a class="link-phone" href="tel:+79340000384"
+            >Телефон: +7 (934) 000-0384</a
+          >
           <div class="social-media-icons"></div>
         </div>
       </div>
@@ -25,16 +27,19 @@
       <div class="right-column">
         <div class="contact-info">
           <!-- Иконки социальных сетей -->
-          <img
-            src="./public/иконка.jpeg"
-            alt="Telegram"
-            class="social-icon"
-            onclick="openLink( )" />
-          <img
-            src="./public/иконка вк.svg"
-            alt="VKontakte"
-            class="social-icon"
-            onclick="openLink( )" />
+          <a href="https://t.me/magiyaiskusstva">
+            <img
+              src="./public/иконка.jpeg"
+              alt="Telegram"
+              class="social-icon" />
+          </a>
+
+          <a href="https://vk.com/magiskus">
+            <img
+              src="./public/иконка вк.svg"
+              alt="VKontakte"
+              class="social-icon" />
+          </a>
         </div>
       </div>
     </header>
@@ -60,7 +65,7 @@
               </li>
             </ul>
           </li>
-          <li>Мы В Медиа</li>
+          <!-- <li>Мы В Медиа</li> -->
           <li><a href="tel:+79340000384"> Хочу У Вас Работать </a></li>
         </ul>
 
@@ -78,20 +83,13 @@
       <button class="next">Вперед</button>
     </div>
     <div class="fixed-buttons">
-      <button class="button" id="openModalButton">Онлайн-запись</button>
+      <button class="button">
+        <a
+          href="https://yandex.ru/maps/org/magiya_iskusstva/1006427653/?booking%5Bpage%5D=services&booking%5Bpermalink%5D=1006427653&ll=37.281602%2C55.685056&z=16"
+          >Онлайн запись</a
+        >
+      </button>
       <button class="button" id="openModalButton2">Закажи звонок</button>
-    </div>
-
-    <div class="modal" id="modal">
-      <div class="modal-content">
-        <h2>Оставьте ваш номер телефона</h2>
-        <input
-          class="formNum"
-          type="text"
-          id="phoneNumber"
-          placeholder="Введите номер телефона" />
-        <button id="callMeButton">Перезвоните мне</button>
-      </div>
     </div>
 
     <div class="message"></div>
