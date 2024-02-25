@@ -642,7 +642,7 @@ header {
 
 /* медиа запросы шапка */
 
-@media screen and (min-width: 750px) {
+@media screen and (max-width: 750px) {
   body {
     overflow-x: hidden;
   }
@@ -698,7 +698,113 @@ header {
 }
 
 /* Медиа-запрос для мобильных устройств до 800 */
-@media (min-width: 800) {
+@media (max-width: 800) {
+  header {
+    flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
+    padding: 0px;
+  }
+
+  .left-column,
+  .right-column {
+    font-size: 10px; /* Уменьшаем размер шрифта */
+  }
+
+  .menu {
+    height: auto; /* Устанавливаем высоту меню по содержимому */
+    flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
+    text-align: center; /* Выравниваем текст по центру */
+    margin-top: 10px; /* Добавляем отступ сверху */
+    max-width: 750px;
+  }
+
+  .contact-info {
+    margin-right: 0; /* Убираем отступ справа */
+    margin-bottom: 10px; /* Добавляем отступ снизу */
+  }
+
+  .social-media-icons {
+    margin-bottom: 10px; /* Добавляем отступ снизу */
+  }
+
+  .menu ul {
+    list-style-type: none;
+    display: flex; /* Добавляем flex для пунктов меню */
+    justify-content: center; /* Выравниваем пункты по центру */
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    margin: 0 20px; /* Уменьшаем отступы между пунктами */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
+  .menu li:hover {
+    color: red;
+  }
+
+  .wrapp__image {
+    max-width: 350px;
+    max-height: 350px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .wrapp {
+    min-width: 100%;
+  }
+
+  .section {
+    margin-top: -110px;
+  }
+  .wrapp {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-wrap {
+    max-width: 400px;
+    max-height: fit-content;
+  }
+  .item__details {
+    max-height: 400px;
+  }
+  .form-feed {
+    margin-left: 100px;
+  }
+
+  .form-feed2 {
+    margin-left: 60px;
+  }
+
+  .feed-btn {
+    margin-right: 10px;
+  }
+  .photo {
+    display: none;
+  }
+  footer {
+    background-color: #333232;
+    color: #ccc;
+    margin-top: 20px;
+  }
+  .about-us {
+    padding-left: 20px;
+    width: 750px;
+  }
+
+  .about-us-text {
+    font-size: 16px;
+  }
+  .about__title {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 400px) {
   header {
     flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
     padding: 0px;
