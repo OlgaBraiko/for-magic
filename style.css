@@ -642,7 +642,7 @@ header {
 
 /* медиа запросы шапка */
 
-@media (max-width: 800px) {
+@media screen and (min-width: 750px) {
   body {
     overflow-x: hidden;
   }
@@ -686,6 +686,7 @@ header {
   }
   .about-us {
     padding-left: 20px;
+    width: 750px;
   }
 
   .about-us-text {
@@ -697,7 +698,7 @@ header {
 }
 
 /* Медиа-запрос для мобильных устройств до 800 */
-@media (max-width: 800) {
+@media (min-width: 800) {
   header {
     flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
     padding: 0px;
