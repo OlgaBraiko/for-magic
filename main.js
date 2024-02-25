@@ -94,17 +94,3 @@ document
 function openWorkWats() {
   window.location.href = "https://wa.me/79340000384";
 }
-
-// кнопка отзывы салон
-
-document.querySelector(".feed-btn").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.href =
-    "https://yandex.ru/maps/org/magiya_iskusstva/1006427653/reviews/?ll=37.281546%2C55.685137&z=14";
-});
-
-document.querySelector(".feed-btn2").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.href =
-    "https://zoon.ru/msk/beauty/salon_krasoty_magiya_iskusstva/#reviews";
-});
