@@ -357,7 +357,7 @@ h1 {
   color: #fff;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .navbar ul {
     display: none;
     flex-direction: column;
@@ -643,9 +643,9 @@ header {
   font-size: 16px;
 }
 
-/* медиа запросы шапка */
+/* медиа запросы   */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 900px) {
   body {
     overflow-x: hidden;
     margin: 0;
@@ -663,7 +663,7 @@ header {
   }
   .section {
     margin-top: -110px;
-    width: 350px;
+    width: 400px;
   }
   .title__feedbek {
     margin-left: 80px;
@@ -678,6 +678,7 @@ header {
     flex-direction: column;
     gap: 20px;
     max-width: 400px;
+
     max-height: fit-content;
   }
   .feed-btn {
@@ -688,6 +689,14 @@ header {
   }
   .form-feed {
     margin-left: 100px;
+  }
+
+  .image-feed {
+    width: 450px;
+  }
+  .wrapp__image {
+    max-width: 350px;
+    max-height: 350px;
   }
 
   .photo {
@@ -705,15 +714,7 @@ header {
   .about__title {
     font-size: 25px;
   }
-}
 
-/* Медиа-запрос для мобильных устройств до 800 */
-@media (max-width: 800) {
-  body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-  }
   header {
     flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
     padding: 0px;
@@ -758,28 +759,17 @@ header {
   .menu li:hover {
     color: red;
   }
-}
-
-@media screen and (max-width: 400px) {
-  body {
-    overflow-x: hidden;
-  }
 
   .wrapp {
     max-width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
   .gallery {
     height: 500px;
     width: 400px;
   }
 
-  /* .section {
-    margin-top: -110px;
-  } */
-  .wrapp {
-    flex-direction: column;
-    align-items: center;
-  }
   .form-wrap {
     max-width: 400px;
     max-height: fit-content;
@@ -795,9 +785,6 @@ header {
     margin-left: 60px;
   }
 
-  /* .feed-btn {
-    margin-right: 10px;
-  } */
   .photo {
     display: none;
   }
@@ -805,12 +792,12 @@ header {
     background-color: #333232;
     color: #ccc;
     margin-top: 20px;
-    width: 400px;
+    width: 450px;
     box-sizing: border-box;
   }
 
   .about-us-text {
-    font-size: 12px;
+    font-size: 14px;
   }
   .about__title {
     font-size: 25px;
@@ -820,18 +807,115 @@ header {
     height: 300px;
   }
   .container-text {
-    width: 350px;
-  }
-}
-
-@media (max-width: 400px) {
-  header {
-    flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
-    padding: 0px;
+    width: 400px;
   }
   .button {
     margin-right: 55px;
   }
+  .left-column,
+  .right-column {
+    font-size: 10px; /* Уменьшаем размер шрифта */
+  }
+
+  .contact-info {
+    margin-right: 0; /* Убираем отступ справа */
+    margin-bottom: 10px; /* Добавляем отступ снизу */
+    padding-bottom: 200px;
+    padding-right: 50px;
+  }
+
+  .menu ul {
+    list-style-type: none;
+    display: flex; /* Добавляем flex для пунктов меню */
+    justify-content: center; /* Выравниваем пункты по центру */
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    margin: 0 20px; /* Уменьшаем отступы между пунктами */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
+  .menu li:hover {
+    color: red;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .wrapp {
+    width: 100%;
+  }
+  .container__feedbek {
+    max-width: 300px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about-us {
+    padding-left: 50px;
+    width: 300px;
+  }
+  .section {
+    margin-top: -110px;
+    width: 350px;
+  }
+  .title__feedbek {
+    margin-left: 80px;
+  }
+
+  .wrapp {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+
+    max-height: fit-content;
+  }
+  .feed-btn {
+    margin-right: 35px;
+  }
+  .item__details {
+    max-height: 400px;
+  }
+  .form-feed {
+    margin-left: 100px;
+  }
+
+  .image-feed {
+    width: 450px;
+  }
+  .wrapp__image {
+    max-width: 400px;
+    max-height: 350px;
+  }
+
+  .photo {
+    display: none;
+  }
+
+  .about-us-text {
+    font-size: 12px;
+  }
+  .about__title {
+    font-size: 25px;
+  }
+
+  header {
+    flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
+    padding: 0px;
+  }
+
   .left-column,
   .right-column {
     font-size: 10px; /* Уменьшаем размер шрифта */
@@ -848,8 +932,7 @@ header {
   .contact-info {
     margin-right: 0; /* Убираем отступ справа */
     margin-bottom: 10px; /* Добавляем отступ снизу */
-    padding-bottom: 200px;
-    padding-right: 50px;
+    padding-bottom: 30px;
   }
 
   .social-media-icons {
@@ -873,8 +956,84 @@ header {
     color: red;
   }
 
-  .wrapp__image {
-    max-width: 350px;
-    max-height: 350px;
+  .wrapp {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery {
+    height: 500px;
+    width: 400px;
+  }
+
+  .form-wrap {
+    max-width: 400px;
+    max-height: fit-content;
+  }
+  .item__details {
+    max-height: 400px;
+  }
+  .form-feed {
+    margin-left: 100px;
+  }
+
+  .form-feed2 {
+    margin-left: 60px;
+  }
+
+  .photo {
+    display: none;
+  }
+  footer {
+    background-color: #333232;
+    color: #ccc;
+    margin-top: 20px;
+    width: 400px;
+    box-sizing: border-box;
+  }
+
+  .about-us-text {
+    font-size: 14px;
+  }
+  .about__title {
+    font-size: 25px;
+  }
+  .image-us {
+    width: 300px;
+    height: 300px;
+  }
+  .container-text {
+    width: 400px;
+  }
+  .button {
+    margin-right: 55px;
+  }
+  .left-column,
+  .right-column {
+    font-size: 10px; /* Уменьшаем размер шрифта */
+  }
+
+  .contact-info {
+    margin-right: 0; /* Убираем отступ справа */
+    margin-bottom: 10px; /* Добавляем отступ снизу */
+    padding-bottom: 200px;
+    padding-right: 50px;
+  }
+
+  .menu ul {
+    list-style-type: none;
+    display: flex; /* Добавляем flex для пунктов меню */
+    justify-content: center; /* Выравниваем пункты по центру */
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    margin: 0 20px; /* Уменьшаем отступы между пунктами */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
+  .menu li:hover {
+    color: red;
   }
 }
