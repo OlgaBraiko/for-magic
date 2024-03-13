@@ -4,40 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+
     <title>Magiskus</title>
     <script type="module" src="./main.js" defer></script>
   </head>
   <body>
     <header>
       <div class="left-column">
-        <div class="contact-info">
-          <p>Адрес: ул. Говорова, 2А</p>
-          <a class="link-phone" href="tel:+79340000384"
-            >Телефон: +7 (934) 000-0384</a
-          >
+        <div class="contact-info1">
+          <p>
+            <b class="color"> Московская область </b>
+            <b class="color"> г.Одинцово <br />ул.Говорова, 2А</b>
+            <a class="link-phone" href="tel:+79340000384">
+              <br />8 (934) 000-0384</a
+            >
+          </p>
+
           <div class="social-media-icons"></div>
         </div>
       </div>
       <div class="logo">
         <img
           src="./public/лого узкий.png"
-          width="170px"
-          height="170px"
+          width="220px"
+          height="220px"
           alt="logo" />
       </div>
       <div class="right-column">
         <div class="contact-info">
           <!-- Иконки социальных сетей -->
           <a href="https://t.me/magiyaiskusstva">
-            <img
-              src="./public/иконка.jpeg"
-              alt="Telegram"
-              class="social-icon" />
+            <img src="./public/телега.png" alt="Telegram" class="social-icon" />
           </a>
 
           <a href="https://vk.com/magiskus">
             <img
-              src="./public/иконка вк.svg"
+              src="./public/вк черный.jpeg"
               alt="VKontakte"
               class="social-icon" />
           </a>
@@ -66,22 +68,53 @@
               </li>
             </ul>
           </li>
-          <!-- <li>Мы В Медиа</li> -->
-          <li><a href="tel:+79340000384"> Хочу У Вас Работать </a></li>
-        </ul>
 
-        <div class="burger-menu">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+          <li>
+            <a id="openModalButton1"> Хочу У Вас Работать </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="burger-menu">
+      <div class="burger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="burger-menu-content">
+        <div class="menu1">
+          <li class="scroll-about">О Нас</li>
+          <li class="scroll-link">Услуги</li>
+          <li class="dropdown-trigger">
+            Я Хочу
+            <ul class="dropdown1">
+              <li><a href="hair.html" class="scroll-link">Укладку</a></li>
+              <li><a href="face.html" class="scroll-link">Гладкую кожу</a></li>
+              <li><a href="nail.html" class="scroll-link">Маникюр</a></li>
+              <li>
+                <a href="priceBody.html" class="scroll-link"
+                  >Идеальную фигуру</a
+                >
+              </li>
+              <li>
+                <a href="face.html" class="scroll-link">Подтянутый овал лица</a>
+              </li>
+            </ul>
+          </li>
         </div>
       </div>
     </div>
     <div class="gallery">
-      <img class="gallery-photo" src="./public/ставить2.jpeg" alt="Photo 1" />
-      <img class="gallery-photo" src="./public/ставить.jpeg" alt="Photo 1" />
-      <button class="prev">Назад</button>
-      <button class="next">Вперед</button>
+      <img
+        class="gallery-photo"
+        src="./public/Marie Claire Beauty.jpeg"
+        alt="Photo 1" />
+      <img
+        class="gallery-photo"
+        src="./public/Пигмент волоса.jpeg"
+        alt="Photo 2" />
+      <img class="gallery-photo" src="./public/кудри.jpeg" alt="Photo 3" />
     </div>
     <div class="fixed-buttons">
       <button class="button">
@@ -100,32 +133,29 @@
         <a class="item item__container" href="hair.html">
           <img
             class="item__details"
-            src="./public/IMAGE 2024-01-23 11:16:07.jpg"
+            src="./public/IMAGE 2024-03-08 15:40:39.jpg "
             alt="" />
           <div class="caption">Волосы форма стиль цвет</div>
         </a>
         <a class="item item__container" href="makeup.html">
-          <img
-            class="item__details"
-            src="./public/IMAGE 2024-01-23 11:19:05.jpg"
-            alt="" />
+          <img class="item__details" src="./public/_ (3).jpeg" alt="" />
           <div class="caption">Лицо брови make-up</div>
         </a>
         <a class="item item__container" href="face.html">
           <img
             class="item__details"
-            src="./public/Снимок экрана 2024-01-25 в 22.03.12.png"
+            src="./public/WhatsApp Image 2024-03-09 at 19.31.48.jpeg"
             alt=""
             height="420" />
-          <div class="caption">Лицо. Уход.Пилинги.Массаж</div>
+          <div class="caption">Депеляция Уход Пилинги</div>
         </a>
         <a class="item item__container" href="depel.html">
           <img
             class="item__details"
-            src="./public/_ (1).jpeg"
+            src="./public/мужик.jpeg"
             alt=""
             height="600px" />
-          <div class="caption">Тело. Депеляция</div>
+          <div class="caption">Для мужчин</div>
         </a>
 
         <a class="item item__container" href="priceBody.html">
@@ -134,12 +164,12 @@
             src="./public/_.jpeg"
             alt=""
             height="600px" />
-          <div class="caption">Тело. SPA</div>
+          <div class="caption">Тело.SPA</div>
         </a>
         <a class="item item__container" href="nail.html">
           <img
             class="item__details"
-            src="./public/Women's ready to wear clothes made in USA using technical fabrics.jpeg"
+            src="./public/IMAGE 2024-03-09 19:48:30.jpg"
             alt=""
             height="600px" />
           <div class="caption">Маникюр Педикюр</div>
@@ -157,21 +187,13 @@
               >Оставить отзыв Яндекс</a
             >
           </button>
-          <button class="feed-btn">
+          <button class="feed-btn2">
             <a
               href="https://zoon.ru/msk/beauty/salon_krasoty_magiya_iskusstva/#reviews"
               >Оставить отзыв Zoon</a
             >
           </button>
         </form>
-        <!-- <form class="form-feed2 link-feed">
-          <button class="feed-btn">
-            <a
-              href="https://zoon.ru/msk/beauty/salon_krasoty_magiya_iskusstva/#reviews"
-              >Оставить отзыв Zoon</a
-            >
-          </button>
-        </form> -->
       </div>
 
       <div class="wrapp">
@@ -182,10 +204,7 @@
             alt="" />
         </div>
         <div class="wrapp__image">
-          <img
-            class="image-feed"
-            src="./public/Снимок экрана 2024-01-27 в 16.40.35.png"
-            alt="" />
+          <img class="image-feed" src="./public/666.jpg" alt="" />
         </div>
       </div>
     </div>
@@ -198,9 +217,11 @@
         alt="Фото О Нас" />
       <div class="container-text">
         <p class="about-us-text">
-          Приглашаем вас окунуться в мир настоящей красоты и ухода в "Магии
-          Искусства", где каждый посетитель становится главным героем своей
-          собственной истории преображения.
+          "Салон красоты "Магия Искусства" - это место, где рождается настоящая
+          красота. Наша история началась с мечты о таком месте , где каждый
+          посетитель сможет открыть для себя новые грани своей красоты. Мы
+          стремимся к тому, чтобы каждый клиент почувствовал себя особенным и
+          преображенным после посещения нашего салона.
         </p>
       </div>
     </div>

@@ -58,14 +58,11 @@ showImage(currentImageIndex);
 let intervalId = setInterval(nextImage, 3000);
 
 // Остановить автоматическое листание при наведении мыши
-document.querySelector(".gallery").addEventListener("mouseover", () => {
-  clearInterval(intervalId);
-});
 
 // Возобновить автоматическое листание при уходе мыши
-document.querySelector(".gallery").addEventListener("mouseout", () => {
-  intervalId = setInterval(nextImage, 3000);
-});
+// document.querySelector(".gallery").addEventListener("mouseout", () => {
+//   intervalId = setInterval(nextImage, 3000);
+// });
 
 // Получаем ссылки на изображения
 const images1 = document.querySelectorAll(".gallery img");
@@ -88,6 +85,11 @@ images1.forEach((image) => {
 // WhatsApp;
 document
   .getElementById("openModalButton2")
+  .addEventListener("click", function () {
+    window.location.href = "https://wa.me/79340000384";
+  });
+document
+  .getElementById("openModalButton1")
   .addEventListener("click", function () {
     window.location.href = "https://wa.me/79340000384";
   });
@@ -122,4 +124,28 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndex = (currentIndex + 1) % images.length;
     showImage(currentIndex);
   });
+});
+
+// pricde
+
+const items = document.querySelectorAll(".item");
+
+items.forEach((item) => {
+  const itemText = item.textContent;
+  const priceText = item.nextElementSibling.textContent;
+
+  const lineWidth =
+    item.offsetWidth +
+    parseInt(window.getComputedStyle(item).marginRight) +
+    item.nextElementSibling.offsetWidth +
+    parseInt(window.getComputedStyle(item.nextElementSibling).marginLeft);
+
+  items.style.position = "relative";
+  items.style.paddingBottom = "1px";
+  items.style.marginBottom = "10px";
+
+  item.style.borderBottom = `${lineWidth}px solid black`;
+});
+document.querySelector(".burger-icon").addEventListener("click", () => {
+  document.querySelector(".burger-menu").classList.add("open");
 });
