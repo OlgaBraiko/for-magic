@@ -1,14 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Serif:wght@400;700&display=swap");
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "PT Serif", serif;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 20px;
+
+  vertical-align: middle;
+}
+
+.color {
+  color: cornflowerblue;
 }
 
 .container {
@@ -16,32 +23,83 @@ header {
   margin: 20px auto 20px;
   padding: 0 20px;
 }
+/* ///////// */
+/* BURGER */
+.burger-menu {
+  display: none;
+}
 
+.burger-icon {
+  display: block;
+  cursor: pointer;
+}
+
+.burger-icon span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .burger-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    z-index: 999;
+  }
+
+  .burger-menu-content {
+    display: none;
+  }
+
+  .burger-menu.open .burger-menu-content {
+    display: block;
+  }
+}
+/* ///////// */
+/* BURGER */
 .left-column,
-.right-column {
+.right-column,
+.logo {
   display: flex;
   align-items: center;
+
   font-size: 12px;
 }
 
 .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-right: 90px;
+}
+
+.logo img {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu1 {
+  list-style-type: none;
 }
 
 .contact-info {
-  margin-right: 20px;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.contact-info1 {
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .menu {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100px;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -49,10 +107,6 @@ header {
 .menu ul {
   list-style-type: none;
   display: flex; /* Добавляем flex для пунктов меню */
-}
-
-.menu li {
-  margin: 0 50px;
 }
 
 .menu li:hover,
@@ -90,13 +144,12 @@ li a {
   display: block;
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   .menu1 .dropdown-trigger:hover .dropdown1 {
     display: none;
   }
-}
+} */
 
- 
 .modal-content {
   background-color: #fff; /* Белый фон контента */
   margin: auto;
@@ -151,7 +204,7 @@ button {
   color: #ffffff;
   border: none;
   border-radius: 50%;
-  height: 100px;
+  height: 80px;
   width: 100px;
   text-align: center;
   font-size: 16px;
@@ -186,7 +239,6 @@ html {
 
 .section {
   display: block;
- 
 }
 
 h1 {
@@ -214,6 +266,7 @@ h1 {
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
   counter-increment: item-counter;
+  gap: 100px;
 }
 .item::after {
   content: "";
@@ -235,17 +288,23 @@ h1 {
   max-width: 100%;
   max-height: 400px;
   object-fit: cover;
+  gap: 30px;
 }
 
 .caption {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  font-size: 36px;
   text-align: center;
+  transition: color 0.3s;
+  font-weight: bold;
+}
+
+.item__container:hover .caption {
+  color: #fff;
 }
 
 @media screen and (max-width: 800px) {
@@ -254,53 +313,16 @@ h1 {
   }
 }
 
-/* бургер */
-
-.burger-menu {
-  display: none;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
-.line {
-  width: 50px;
-  height: 4px;
-  background-color: black;
-  margin: 6px 0;
-}
-
-@media only screen and (max-width: 900px) {
-  .burger-menu {
-    display: block;
-  }
-}
-
 .navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   font-size: 18px;
   color: #000;
   padding: 30px 30px;
-}
-
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
 }
 
 .navbar li {
   margin: 0 10px;
 }
 
-.burger-menu {
-  display: none;
-  cursor: pointer;
-}
 .link-yaclains {
   text-decoration: none;
   color: #fff;
@@ -312,10 +334,10 @@ h1 {
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 20px; /* Переместить бургер меню в правый верхний угол */
+    right: 20px;
     background-color: lavender;
     text-align: center;
-    z-index: 1; /* Убедиться, что бургер меню находится над другими элементами */
+    z-index: 1;
   }
 
   .navbar ul.active {
@@ -326,52 +348,49 @@ h1 {
   .navbar li {
     margin: 10px 0;
   }
-
-  .burger-menu {
-    display: block;
-    position: absolute;
-    top: 20px; /* Переместить бургер меню в правый верхний угол */
-    right: 20px; /* Переместить бургер меню в правый верхний угол */
-    z-index: 2; /* Убедиться, что бургер меню находится над другими элементами */
-  }
 }
 
 /* отзывы */
- 
+
 .wrapp {
   display: flex;
   justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
 }
 .title__feedbek {
-  color: green;
   text-transform: uppercase;
   font-size: 35px;
   text-align: center;
+  color: cornflowerblue;
 }
 
- 
 .wrapp__image {
   margin: 20px 0;
 }
 
- 
 .image-feed {
   width: 450px;
   max-width: 100%;
   object-fit: cover;
 }
-/* feed-form */
-.form-feed {
-  margin-left: 260px;
-}
-.form-feed2 {
-  margin-left: 600px;
-}
-/* .form-wrap {
+
+.form-wrap {
   display: flex;
   justify-content: stretch;
   align-items: center;
-} */
+  gap: 60px;
+}
+
+.feed-btn {
+  margin-right: 40px;
+  background-color: #4caf50;
+}
+
+.feed-btn2 {
+  margin-left: 60px;
+  background-color: #4caf50;
+}
 .feed-btn a,
 .feed-btn2 a {
   border: none;
@@ -398,12 +417,12 @@ h1 {
 .about-us-text {
   font-size: 16px;
   max-width: 500px;
-  line-height: 1.5;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 2;
 }
 .about__title {
   text-align: center;
-  color: green;
+  font-size: 42px;
+  color: cornflowerblue;
 }
 
 /* footer */
@@ -415,6 +434,10 @@ footer {
 }
 
 .contact-info {
+  width: 50%;
+  margin: 100px;
+}
+.contact-info1 {
   width: 50%;
   margin: 100px;
 }
@@ -430,7 +453,6 @@ footer {
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
 }
 
 header {
@@ -454,6 +476,9 @@ header {
 }
 
 .contact-info {
+  margin-right: 20px;
+}
+.contact-info1 {
   margin-right: 20px;
 }
 
@@ -487,15 +512,11 @@ header {
 }
 
 @media (max-width: 800px) {
-  .menu1 ul {
-    flex-direction: column; /* Изменяем направление на колонку */
-    align-items: center; /* Выравниваем по центру */
-  }
-
-  .menu1 li {
-    margin: 10px 0; /* Добавляем отступы сверху и снизу */
-    font-size: 16px; /* Возвращаем обычный размер шрифта */
+  .right-column {
     display: none;
+  }
+  .gallery {
+    margin-top: 0;
   }
 
   .fixed-buttons {
@@ -514,6 +535,7 @@ header {
     z-index: auto; /* Сбрасываем z-index */
   }
 }
+
 .dropdown1 a {
   display: block;
   width: auto; /* Подстраивается под ширину контента */
@@ -528,12 +550,10 @@ header {
 
 /* gallery */
 .gallery {
- 
   width: 100%;
   position: relative;
   overflow: hidden;
   aspect-ratio: 1/1;
- 
 }
 
 .gallery img {
@@ -621,28 +641,24 @@ header {
     align-items: center;
   }
 
- 
   .feed-btn {
-    margin-right: 35px;
+    margin-right: 5px;
   }
 
   .image-feed {
-     width: 450px;
-  max-width: 100%;
-  object-fit: cover;
+    width: 450px;
+    max-width: 100%;
+    object-fit: cover;
   }
   .wrapp__image {
     margin: 20px 0;
   }
- 
+
   .form-wrap {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-
-  
- 
 
   .photo {
     display: none;
@@ -654,11 +670,6 @@ header {
 
   .about__title {
     font-size: 25px;
-  }
-
-  header {
-    flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
-    padding: 0px;
   }
 
   .left-column,
@@ -675,21 +686,18 @@ header {
   }
 
   .contact-info {
-    margin-right: 0; /* Убираем отступ справа */
-    margin-bottom: 10px; /* Добавляем отступ снизу */
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+  }
+  .contact-info1 {
+    margin-right: 0;
+    margin-bottom: 10px;
     padding-bottom: 30px;
   }
 
   .social-media-icons {
     margin-bottom: 10px; /* Добавляем отступ снизу */
-  }
-
-  .menu ul {
-    list-style-type: none;
-    display: flex; /* Добавляем flex для пунктов меню */
-    justify-content: center; /* Выравниваем пункты по центру */
-    padding: 0;
-    margin: 0;
   }
 
   .menu li {
@@ -706,7 +714,7 @@ header {
     flex-direction: column;
     align-items: center;
   }
- 
+
   .link-feed {
     display: flex;
     justify-content: start;
@@ -716,7 +724,6 @@ header {
     margin-bottom: 10px;
     padding-right: 100px;
   }
- 
 
   .photo {
     display: none;
@@ -726,7 +733,7 @@ header {
     background-color: #333232;
     color: #ccc;
     margin-top: 20px;
- 
+
     box-sizing: border-box;
   }
 
@@ -756,15 +763,9 @@ header {
     font-size: 10px; /* Уменьшаем размер шрифта */
   }
 
-  .contact-info {
-    margin-right: 0; /* Убираем отступ справа */
-    margin-bottom: 10px; /* Добавляем отступ снизу */
-    padding-bottom: 200px;
-  }
-
   .menu ul {
     list-style-type: none;
-    display: flex; /* Добавляем flex для пунктов меню */
+    display: none; /* Добавляем flex для пунктов меню */
     justify-content: center; /* Выравниваем пункты по центру */
     padding: 0;
     margin: 0;
@@ -787,7 +788,11 @@ header {
     padding: 0;
     box-sizing: border-box;
   }
-
+  .fixed-buttons {
+    width: 100px;
+    height: 170px;
+    font-size: 13px;
+  }
   .wrapp {
     width: 100%;
   }
@@ -801,26 +806,20 @@ header {
     flex-direction: column;
     align-items: center;
   }
- 
-
   .form-wrap {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
   }
 
- 
   .feed-btn {
     margin-right: 35px;
   }
 
- 
   .form-feed {
     margin-left: 100px;
   }
 
- 
   .photo {
     display: none;
   }
@@ -833,8 +832,16 @@ header {
   }
 
   header {
-    flex-direction: column; /* Изменяем направление flex-контейнера на колонку */
-    padding: 0px;
+    flex-direction: row; /* Изменяем направление flex-контейнера на колонку */
+  }
+
+  .logo img {
+    height: 100%; /* Заполнение высоты экрана */
+    width: 100%;
+    object-fit: cover; /* Заполнение контейнера */
+  }
+  .contact-info1 {
+    z-index: 3; /* Надпись поверх картинки */
   }
 
   .left-column,
@@ -850,22 +857,8 @@ header {
     max-width: 750px;
   }
 
-  .contact-info {
-    margin-right: 0; /* Убираем отступ справа */
-    margin-bottom: 10px; /* Добавляем отступ снизу */
-    padding-bottom: 30px;
-  }
-
   .social-media-icons {
     margin-bottom: 10px; /* Добавляем отступ снизу */
-  }
-
-  .menu ul {
-    list-style-type: none;
-    display: flex; /* Добавляем flex для пунктов меню */
-    justify-content: center; /* Выравниваем пункты по центру */
-    padding: 0;
-    margin: 0;
   }
 
   .menu li {
@@ -882,12 +875,10 @@ header {
     flex-direction: column;
     align-items: center;
   }
- 
 
   .form-feed2 {
     margin-left: 60px;
   }
- 
 
   .photo {
     display: none;
@@ -913,36 +904,7 @@ header {
   .container-text {
     width: 400px;
   }
-  .button {
-    margin-right: 55px;
-  }
-  .left-column,
-  .right-column {
-    font-size: 10px; /* Уменьшаем размер шрифта */
-  }
 
-  .contact-info {
-    margin-right: 0; /* Убираем отступ справа */
-    margin-bottom: 10px; /* Добавляем отступ снизу */
-    padding-bottom: 200px;
-  }
-
-  .menu ul {
-    list-style-type: none;
-    display: flex; /* Добавляем flex для пунктов меню */
-    justify-content: center; /* Выравниваем пункты по центру */
-    padding: 0;
-    margin: 0;
-  }
-
-  .menu li {
-    margin: 0 20px; /* Уменьшаем отступы между пунктами */
-    font-size: 14px; /* Уменьшаем размер шрифта */
-  }
-
-  .menu li:hover {
-    color: red;
-  }
   .link-phone-footer {
     text-decoration: none;
     color: #fff;
