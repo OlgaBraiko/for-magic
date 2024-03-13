@@ -239,7 +239,6 @@ html {
 
 .section {
   display: block;
-  margin: 0 auto;
 }
 
 h1 {
@@ -248,12 +247,10 @@ h1 {
 }
 
 /* грид */
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-
   grid-auto-flow: row dense;
 }
 
@@ -292,9 +289,6 @@ h1 {
   max-height: 400px;
   object-fit: cover;
   gap: 30px;
-}
-.item__container {
-  position: relative;
 }
 
 .caption {
@@ -369,6 +363,10 @@ h1 {
   font-size: 35px;
   text-align: center;
   color: cornflowerblue;
+}
+
+.wrapp__image {
+  margin: 20px 0;
 }
 
 .image-feed {
@@ -552,10 +550,10 @@ header {
 
 /* gallery */
 .gallery {
+  width: 100%;
   position: relative;
   overflow: hidden;
   aspect-ratio: 1/1;
-  width: 100%;
 }
 
 .gallery img {
@@ -649,10 +647,17 @@ header {
 
   .image-feed {
     width: 450px;
-  }
-  .wrapp__image {
     max-width: 100%;
     object-fit: cover;
+  }
+  .wrapp__image {
+    margin: 20px 0;
+  }
+
+  .form-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .photo {
@@ -662,6 +667,7 @@ header {
   .about-us-text {
     font-size: 16px;
   }
+
   .about__title {
     font-size: 25px;
   }
@@ -708,6 +714,7 @@ header {
     flex-direction: column;
     align-items: center;
   }
+
   .link-feed {
     display: flex;
     justify-content: start;
@@ -721,6 +728,7 @@ header {
   .photo {
     display: none;
   }
+
   footer {
     background-color: #333232;
     color: #ccc;
@@ -732,19 +740,24 @@ header {
   .about-us-text {
     font-size: 14px;
   }
+
   .about__title {
     font-size: 25px;
   }
+
   .image-us {
     width: 300px;
     height: 300px;
   }
+
   .container-text {
     width: 400px;
   }
+
   .button {
     margin-right: 55px;
   }
+
   .left-column,
   .right-column {
     font-size: 10px; /* Уменьшаем размер шрифта */
@@ -793,9 +806,18 @@ header {
     flex-direction: column;
     align-items: center;
   }
+  .form-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
   .feed-btn {
     margin-right: 35px;
+  }
+
+  .form-feed {
+    margin-left: 100px;
   }
 
   .photo {
@@ -854,9 +876,14 @@ header {
     align-items: center;
   }
 
+  .form-feed2 {
+    margin-left: 60px;
+  }
+
   .photo {
     display: none;
   }
+
   footer {
     background-color: #333232;
     color: #ccc;
