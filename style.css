@@ -853,9 +853,11 @@ header {
   .form-wrap {
     gap: 20px;
   }
-
+  .mapp {
+    max-width: 400px;
+  }
   .mapp-click {
-    box-sizing: border-box;
+    max-width: 100%;
   }
 
   .form-feed {
