@@ -706,7 +706,7 @@ header {
   }
 
   .about-us-text {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .about__title {
@@ -775,11 +775,11 @@ header {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
     align-items: center;
     box-sizing: border-box;
-  }
-  .mapp {
-    order: -1;
+    margin: 0;
+    padding: 0;
   }
 
   .contact-info {
