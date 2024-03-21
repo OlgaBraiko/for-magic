@@ -854,8 +854,8 @@ header {
     gap: 20px;
   }
 
-  .feed-btn {
-    margin-right: 35px;
+  .mapp-click {
+    box-sizing: border-box;
   }
 
   .form-feed {
