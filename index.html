@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./style.css" />
 
     <title>Magiskus</title>
- 
+
     <script type="module" src="./main.js" defer></script>
   </head>
   <body>
@@ -24,13 +24,12 @@
           <div class="social-media-icons"></div>
         </div>
       </div>
-      <div class="logo">
-        <img
-          src="./public/лого узкий.png"
-          width="220px"
-          height="220px"
-          alt="logo" />
+      <div class="fixed-bar">
+        <div class="logo">
+          <img src="./public/МИ.jpg" width="220px" height="220px" alt="logo" />
+        </div>
       </div>
+
       <div class="right-column">
         <div class="contact-info">
           <!-- Иконки социальных сетей -->
@@ -40,7 +39,7 @@
 
           <a href="https://vk.com/magiskus">
             <img
-              src="./public/вк черный.jpeg"
+              src="./public/вк черныйv2?.jpeg"
               alt="VKontakte"
               class="social-icon" />
           </a>
@@ -85,35 +84,76 @@
       </div>
       <div class="burger-menu-content">
         <div class="menu1">
-          <li class="scroll-about">О Нас</li>
-          <li class="scroll-link">Услуги</li>
-          <li class="dropdown-trigger">
+          <li class="scroll-link text scroll">Услуги</li>
+          <li class="dropdown-trigger text scroll">
             Я Хочу
             <ul class="dropdown1">
-              <li><a href="hair.html" class="scroll-link">Укладку</a></li>
-              <li><a href="face.html" class="scroll-link">Гладкую кожу</a></li>
-              <li><a href="nail.html" class="scroll-link">Маникюр</a></li>
-              <li>
-                <a href="priceBody.html" class="scroll-link"
+              <li class="paragraph">
+                <a href="hair.html" class="scroll-link a">Укладку</a>
+              </li>
+              <li class="paragraph">
+                <a href="face.html" class="scroll-link a">Гладкую кожу</a>
+              </li>
+              <li class="paragraph">
+                <a href="nail.html" class="scroll-link a">Маникюр</a>
+              </li>
+              <li class="paragraph">
+                <a href="priceBody.html" class="scroll-link a"
                   >Идеальную фигуру</a
                 >
               </li>
-              <li>
-                <a href="face.html" class="scroll-link">Подтянутый овал лица</a>
+              <li class="paragraph">
+                <a href="face.html" class="scroll-link a"
+                  >Подтянутый овал лица</a
+                >
               </li>
             </ul>
           </li>
+          <li class="scroll-about text scroll600">О Нас</li>
+
+          <li>
+            <a class="workout text" id="openModalButton1">
+              Хочу У Вас Работать
+            </a>
+          </li>
+        </div>
+      </div>
+      <div class="right-column1">
+        <div class="contact-info">
+          <!-- Иконки социальных сетей -->
+          <a href="https://t.me/magiyaiskusstva">
+            <img src="./public/телега.png" alt="Telegram" class="social-icon" />
+          </a>
+
+          <a href="https://vk.com/magiskus">
+            <img
+              src="./public/вк черныйv2?.jpeg"
+              alt="VKontakte"
+              class="social-icon" />
+          </a>
+        </div>
+        <div class="left-column1">
+          <div class="contact-info1">
+            <p>
+              <b class="color"> Московская область </b>
+              <b class="color"> г.Одинцово <br />ул.Говорова, 2А</b>
+              <a class="link-phone" href="tel:+79340000384">
+                <br />8 (934) 000-0384</a
+              >
+            </p>
+          </div>
         </div>
       </div>
     </div>
+
     <div class="gallery">
       <img
         class="gallery-photo"
-        src="./public/Marie Claire Beauty.jpeg"
+        src="./public/IMAGE 2024-03-19 17:00:41.jpg"
         alt="Photo 1" />
       <img
         class="gallery-photo"
-        src="./public/Пигмент волоса.jpeg"
+        src="./public/AHFA FINALIST_ HAIR SHOT, JOE COTRONEO.jpeg"
         alt="Photo 2" />
       <img class="gallery-photo" src="./public/кудри.jpeg" alt="Photo 3" />
     </div>
@@ -132,10 +172,7 @@
     <section class="section container">
       <div class="grid">
         <a class="item item__container" href="hair.html">
-          <img
-            class="item__details"
-            src="./public/IMAGE 2024-03-08 15:40:39.jpg "
-            alt="" />
+          <img class="item__details" src="./public/blond.jpg " alt="" />
           <div class="caption">Волосы форма стиль цвет</div>
         </a>
         <a class="item item__container" href="makeup.html">
@@ -229,14 +266,15 @@
     <footer>
       <div class="contact-info">
         <h3>Контакты</h3>
-        <p>Адрес: ул. Говорова, д. 2А, г. Одинцово</p>
-        <a class="link-phone-footer" href="tel:+79340000384"
-          >Телефон: +7 (934) 000-0384</a
+        <p>ул. Говорова, д. 2А г.Одинцово</p>
+        <a class="link-phone-footer" href="tel:+79340000384">
+          +7 (934) 000-0384</a
         >
         <p>График работы: Пн-Вс: 9:00-21:00</p>
       </div>
-      <div class="photo">
+      <div>
         <img
+          class="mapp-click"
           src="./public/Снимок экрана 2024-02-01 в 15.22.46.png"
           width="700px"
           height="600px"

@@ -26,6 +26,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollAbout = document.querySelector(".scroll-link");
+  scrollAbout.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 1500,
+      behavior: "smooth",
+    });
+  });
+});
+
 //swipe gallery
 
 let currentImageIndex = 0;
@@ -114,38 +125,63 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+});
 
-  prevButton.addEventListener("click", function () {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex);
+document.querySelector(".burger-icon").addEventListener("click", function () {
+  document.querySelector(".burger-menu-content").style.display = "block";
+  document.querySelector(".right-column1").style.display = "block";
+  document.querySelector(".left-column1").style.display = "block";
+});
+
+window.addEventListener("click", function (event) {
+  if (
+    !event.target.closest(".burger-menu-content") &&
+    !event.target.closest(".burger-icon")
+  ) {
+    document.querySelector(".burger-menu-content").style.display = "none";
+    document.querySelector(".right-column1").style.display = "none";
+    document.querySelector(".left-column1").style.display = "none";
+  }
+});
+
+// document.querySelectorAll(".scroll").forEach((item) => {
+//   item.addEventListener("click", () => {
+//     window.scrollBy({
+//       top: 700,
+//       behavior: "smooth",
+//     });
+//     document.querySelector(".burger-menu").style.display = "none";
+//   });
+// });
+
+document.querySelectorAll(".scroll600").forEach((item) => {
+  item.addEventListener("click", () => {
+    window.scrollBy({
+      top: 3500,
+      behavior: "smooth",
+    });
+
+    document.querySelector(".burger-menu").style.display = "none";
   });
+});
+document.querySelectorAll(".scroll").forEach((item) => {
+  item.addEventListener("click", () => {
+    window.scrollBy({
+      top: 2000,
+      behavior: "smooth",
+    });
 
-  nextButton.addEventListener("click", function () {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
+    document.querySelector(".burger-menu").style.display = "none";
   });
 });
 
-// pricde
-
-const items = document.querySelectorAll(".item");
-
-items.forEach((item) => {
-  const itemText = item.textContent;
-  const priceText = item.nextElementSibling.textContent;
-
-  const lineWidth =
-    item.offsetWidth +
-    parseInt(window.getComputedStyle(item).marginRight) +
-    item.nextElementSibling.offsetWidth +
-    parseInt(window.getComputedStyle(item.nextElementSibling).marginLeft);
-
-  items.style.position = "relative";
-  items.style.paddingBottom = "1px";
-  items.style.marginBottom = "10px";
-
-  item.style.borderBottom = `${lineWidth}px solid black`;
+document.querySelector(".workout").addEventListener("click", function () {
+  window.location.href = "https://wa.me/79340000384";
 });
-document.querySelector(".burger-icon").addEventListener("click", () => {
-  document.querySelector(".burger-menu").classList.add("open");
+
+//click mapp yandex
+
+document.querySelector(".mapp-click").addEventListener("click", () => {
+  window.location.href =
+    "https://yandex.ru/maps/org/magiya_iskusstva/1006427653/?ll=37.281503%2C55.686752&z=14.65";
 });

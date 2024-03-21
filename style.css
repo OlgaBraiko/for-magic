@@ -13,6 +13,31 @@ header {
 
   vertical-align: middle;
 }
+.color-phone {
+  color: cornflowerblue;
+}
+@media (max-width: 800px) {
+  .fixed-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Число может быть любым, чтобы гарантировать, что элемент будет выше других */
+  }
+
+  .logo {
+    position: fixed;
+    top: 10px; /* Расположение логотипа относительно верхнего края */
+    left: 10px; /* Расположение логотипа относительно левого края */
+    width: 100px;
+    height: 100px;
+    top: 10px; /* Расположение логотипа относительно верхнего края */
+    left: 10px;
+    z-index: 1001; /* Число должно быть больше, чем у .fixed-bar, чтобы логотип был над полоской */
+  }
+}
 
 .color {
   color: cornflowerblue;
@@ -46,19 +71,28 @@ header {
   .burger-menu {
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 50%;
+    margin-top: 20px;
     background-color: #fff;
     padding: 10px;
     z-index: 999;
+    position: fixed;
+    top: 10px; /* Расположение бургер-меню относительно верхнего края */
+    right: 10px; /* Расположение бургер-меню относительно правого края */
+    z-index: 10001;
+  }
+
+  .burger-menu-content {
+    height: 250px;
+    display: block;
   }
 
   .burger-menu-content {
     display: none;
   }
-
-  .burger-menu.open .burger-menu-content {
-    display: block;
+  .small-list {
+    display: none;
   }
 }
 /* ///////// */
@@ -111,7 +145,7 @@ header {
 
 .menu li:hover,
 li a:hover {
-  color: red;
+  color: cornflowerblue;
 }
 li a {
   text-decoration: none;
@@ -143,12 +177,6 @@ li a {
 .menu1 .dropdown-trigger:hover .dropdown1 {
   display: block;
 }
-
-/* @media screen and (max-width: 800px) {
-  .menu1 .dropdown-trigger:hover .dropdown1 {
-    display: none;
-  }
-} */
 
 .modal-content {
   background-color: #fff; /* Белый фон контента */
@@ -310,6 +338,7 @@ h1 {
 @media screen and (max-width: 800px) {
   .grid {
     grid-template-columns: 1fr;
+    grid-gap: 40px;
   }
 }
 
@@ -376,10 +405,12 @@ h1 {
 }
 
 .form-wrap {
-  display: flex;
-  justify-content: stretch;
   align-items: center;
   gap: 60px;
+}
+.form-feed {
+  display: flex;
+  justify-content: center;
 }
 
 .feed-btn {
@@ -443,7 +474,7 @@ footer {
 }
 .link-phone-footer {
   text-decoration: none;
-  color: #000;
+  color: cornflowerblue;
 }
 .photo {
   width: 50%;
@@ -480,6 +511,7 @@ header {
 }
 .contact-info1 {
   margin-right: 20px;
+  color: cornflowerblue;
 }
 
 .menu {
@@ -513,6 +545,12 @@ header {
 
 @media (max-width: 800px) {
   .right-column {
+    display: none;
+  }
+  .right-column1 {
+    display: none;
+  }
+  .left-column {
     display: none;
   }
   .gallery {
@@ -617,8 +655,6 @@ header {
   font-size: 16px;
 }
 .form-wrap {
-  display: flex;
-  flex-direction: column;
   gap: 20px;
 }
 
@@ -641,10 +677,6 @@ header {
     align-items: center;
   }
 
-  .feed-btn {
-    margin-right: 5px;
-  }
-
   .image-feed {
     width: 450px;
     max-width: 100%;
@@ -656,12 +688,21 @@ header {
 
   .form-wrap {
     display: flex;
-    flex-direction: column;
+
     gap: 20px;
   }
+  .dropdown1 a {
+    line-height: 1;
+    text-transform: uppercase;
+  }
 
-  .photo {
-    display: none;
+  .menu1 {
+    text-align: center;
+    margin-top: 30px;
+    line-height: 2;
+  }
+  .menu1 li:hover {
+    color: cornflowerblue;
   }
 
   .about-us-text {
@@ -706,9 +747,12 @@ header {
   }
 
   .menu li:hover {
-    color: red;
+    color: cornflowerblue;
   }
-
+  .text {
+    font-size: 20px;
+    line-height: 3;
+  }
   .wrapp {
     max-width: 100%;
     flex-direction: column;
@@ -725,16 +769,21 @@ header {
     padding-right: 100px;
   }
 
-  .photo {
-    display: none;
-  }
-
   footer {
     background-color: #333232;
     color: #ccc;
     margin-top: 20px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-sizing: border-box;
+  }
+  .mapp {
+    order: -1;
+  }
+
+  .contact-info {
+    margin-top: 20px;
   }
 
   .about-us-text {
@@ -771,13 +820,8 @@ header {
     margin: 0;
   }
 
-  .menu li {
-    margin: 0 20px; /* Уменьшаем отступы между пунктами */
-    font-size: 14px; /* Уменьшаем размер шрифта */
-  }
-
   .menu li:hover {
-    color: red;
+    color: cornflowerblue;
   }
 }
 
@@ -807,8 +851,6 @@ header {
     align-items: center;
   }
   .form-wrap {
-    display: flex;
-    flex-direction: column;
     gap: 20px;
   }
 
@@ -818,10 +860,6 @@ header {
 
   .form-feed {
     margin-left: 100px;
-  }
-
-  .photo {
-    display: none;
   }
 
   .about-us-text {
@@ -863,11 +901,11 @@ header {
 
   .menu li {
     margin: 0 20px; /* Уменьшаем отступы между пунктами */
-    font-size: 14px; /* Уменьшаем размер шрифта */
+    font-size: 19px; /* Уменьшаем размер шрифта */
   }
 
   .menu li:hover {
-    color: red;
+    color: cornflowerblue;
   }
 
   .wrapp {
@@ -878,17 +916,6 @@ header {
 
   .form-feed2 {
     margin-left: 60px;
-  }
-
-  .photo {
-    display: none;
-  }
-
-  footer {
-    background-color: #333232;
-    color: #ccc;
-    margin-top: 20px;
-    box-sizing: border-box;
   }
 
   .about-us-text {
