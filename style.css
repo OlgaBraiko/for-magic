@@ -912,6 +912,7 @@ header {
   }
   .about-us-text {
     font-size: 14px;
+    padding-left: 30px;
   }
   .about__title {
     font-size: 25px;
