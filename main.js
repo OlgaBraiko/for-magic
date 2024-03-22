@@ -138,21 +138,22 @@ window.addEventListener("click", function (event) {
     !event.target.closest(".burger-menu-content") &&
     !event.target.closest(".burger-icon")
   ) {
-    document.querySelector(".burger-menu-content").style.display = "none";
-    document.querySelector(".right-column1").style.display = "none";
-    document.querySelector(".left-column1").style.display = "none";
+    // document.querySelector(".burger-menu-content").style.display = "none";
+    // document.querySelector(".right-column1").style.display = "none";
+    // document.querySelector(".left-column1").style.display = "none";
   }
 });
 
-// document.querySelectorAll(".scroll").forEach((item) => {
-//   item.addEventListener("click", () => {
-//     window.scrollBy({
-//       top: 700,
-//       behavior: "smooth",
-//     });
-//     document.querySelector(".burger-menu").style.display = "none";
-//   });
-// });
+document.querySelectorAll(".scroll").forEach((item) => {
+  item.addEventListener("click", () => {
+    window.scrollBy({
+      top: 700,
+      behavior: "smooth",
+    });
+    document.querySelector(".burger-menu").style.display = "none";
+    document.querySelector(".burger-icon").style.display = "block";
+  });
+});
 
 document.querySelectorAll(".scroll600").forEach((item) => {
   item.addEventListener("click", () => {
@@ -162,6 +163,7 @@ document.querySelectorAll(".scroll600").forEach((item) => {
     });
 
     document.querySelector(".burger-menu").style.display = "none";
+    document.querySelector(".burger-icon").style.display = "block";
   });
 });
 document.querySelectorAll(".scroll").forEach((item) => {
@@ -171,7 +173,7 @@ document.querySelectorAll(".scroll").forEach((item) => {
       behavior: "smooth",
     });
 
-    document.querySelector(".burger-menu").style.display = "none";
+    // document.querySelector(".burger-menu").style.display = "none";
   });
 });
 
@@ -184,4 +186,26 @@ document.querySelector(".workout").addEventListener("click", function () {
 document.querySelector(".mapp-click").addEventListener("click", () => {
   window.location.href =
     "https://yandex.ru/maps/org/magiya_iskusstva/1006427653/?ll=37.281503%2C55.686752&z=14.65";
+});
+
+//test
+
+document.querySelectorAll(".section container").forEach((item) => {
+  let isTouching = false;
+
+  item.addEventListener("touchstart", function () {
+    isTouching = true;
+    this.classList.add("hover");
+  });
+
+  item.addEventListener("touchend", function () {
+    isTouching = false;
+    this.classList.remove("hover");
+  });
+
+  item.addEventListener("touchmove", function () {
+    if (isTouching) {
+      this.classList.add("hover");
+    }
+  });
 });
