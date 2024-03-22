@@ -405,8 +405,9 @@ h1 {
 }
 
 .form-wrap {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 60px;
 }
 .form-feed {
   display: flex;
@@ -414,13 +415,13 @@ h1 {
 }
 
 .feed-btn {
-  margin-right: 40px;
   background-color: #4caf50;
+  gap: 60px;
 }
 
 .feed-btn2 {
-  margin-left: 60px;
   background-color: #4caf50;
+  gap: 60px;
 }
 .feed-btn a,
 .feed-btn2 a {
@@ -906,6 +907,8 @@ header {
     flex-direction: column;
     max-width: 100%;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
   }
   .about-us-text {
     font-size: 14px;
