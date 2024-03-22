@@ -27,7 +27,7 @@ body {
   display: block;
   position: absolute;
   bottom: 0;
-  width: 1000px; /* Длина линии */
+  width: 100%; /* Длина линии */
   border-bottom: 1px solid cornflowerblue; /* Стиль линии */
 }
 
@@ -44,5 +44,13 @@ body {
   }
   .price-list {
     padding: 20px;
+  }
+  .item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    max-width: 100%; /* Длина линии */
+    border-bottom: 1px solid cornflowerblue; /* Стиль линии */
   }
 }
