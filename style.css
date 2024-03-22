@@ -853,12 +853,6 @@ header {
   .form-wrap {
     gap: 20px;
   }
-  .mapp {
-    max-width: 400px;
-  }
-  .mapp-click {
-    max-width: 100%;
-  }
 
   .form-feed {
     margin-left: 100px;
