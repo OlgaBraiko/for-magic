@@ -190,22 +190,17 @@ document.querySelector(".mapp-click").addEventListener("click", () => {
 
 //test
 
-document.querySelectorAll(".section container").forEach((item) => {
-  let isTouching = false;
+document.addEventListener("scroll", function () {
+  let sections = document.querySelectorAll(".section");
 
-  item.addEventListener("touchstart", function () {
-    isTouching = true;
-    this.classList.add("hover");
-  });
+  sections.forEach((section) => {
+    let caption = section.querySelector(".caption");
+    let rect = section.getBoundingClientRect();
 
-  item.addEventListener("touchend", function () {
-    isTouching = false;
-    this.classList.remove("hover");
-  });
-
-  item.addEventListener("touchmove", function () {
-    if (isTouching) {
-      this.classList.add("hover");
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      caption.classList.add("visible");
+    } else {
+      caption.classList.remove("visible");
     }
   });
 });
