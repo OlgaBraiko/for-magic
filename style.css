@@ -71,6 +71,7 @@ header {
   .burger-menu {
     display: block;
     position: absolute;
+    max-width: 300px;
     top: 10px;
     right: 50%;
     margin-top: 20px;
@@ -911,8 +912,7 @@ header {
     align-items: center;
   }
   .about-us-text {
-    font-size: 14px;
-    padding-left: 30px;
+    font-size: 12px;
   }
   .about__title {
     font-size: 25px;
