@@ -331,6 +331,10 @@ h1 {
   transition: color 0.3s;
   font-weight: bold;
 }
+.visible {
+  display: block; /* отображение элемента как блочного */
+  visibility: visible; /* видимость элемента */
+}
 
 .item__container:hover .caption {
   color: #fff;
