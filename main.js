@@ -190,17 +190,25 @@ document.querySelector(".mapp-click").addEventListener("click", () => {
 
 //test
 
-document.addEventListener("scroll", function () {
-  let sections = document.querySelectorAll(".section");
-
-  sections.forEach((section) => {
-    let caption = section.querySelector(".caption");
-    let rect = section.getBoundingClientRect();
-
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      caption.classList.add("visible");
+function handleIntersection(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
     } else {
-      caption.classList.remove("visible");
+      entry.target.classList.remove("visible");
     }
   });
+}
+
+// Создаем новый экземпляр IntersectionObserver
+const observer = new IntersectionObserver(handleIntersection, {
+  threshold: 0.5,
+});
+
+// Находим все элементы с классом 'caption'
+const captions = document.querySelectorAll(".caption");
+
+// Для каждого элемента добавляем его в IntersectionObserver
+captions.forEach((caption) => {
+  observer.observe(caption);
 });
