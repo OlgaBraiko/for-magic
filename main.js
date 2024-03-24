@@ -200,15 +200,11 @@ function handleIntersection(entries) {
   });
 }
 
-// Создаем новый экземпляр IntersectionObserver
-const observer = new IntersectionObserver(handleIntersection, {
-  threshold: 0.5,
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const section = document.querySelector(".item__container");
+  const caption = document.querySelector(".caption");
 
-// Находим все элементы с классом 'caption'
-const captions = document.querySelectorAll(".caption");
-
-// Для каждого элемента добавляем его в IntersectionObserver
-captions.forEach((caption) => {
-  observer.observe(caption);
+  section.addEventListener("touchstart", function () {
+    caption.style.display = "block";
+  });
 });
