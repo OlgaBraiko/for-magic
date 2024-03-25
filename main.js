@@ -112,8 +112,7 @@ function openWorkWats() {
 document.addEventListener("DOMContentLoaded", function () {
   const gallery = document.querySelector(".gallery");
   const images = gallery.querySelectorAll("img");
-  const prevButton = gallery.querySelector(".prev");
-  const nextButton = gallery.querySelector(".next");
+
   let currentIndex = 0;
 
   function showImage(index) {
@@ -138,9 +137,9 @@ window.addEventListener("click", function (event) {
     !event.target.closest(".burger-menu-content") &&
     !event.target.closest(".burger-icon")
   ) {
-    // document.querySelector(".burger-menu-content").style.display = "none";
-    // document.querySelector(".right-column1").style.display = "none";
-    // document.querySelector(".left-column1").style.display = "none";
+    document.querySelector(".burger-menu-content").style.display = "none";
+    document.querySelector(".right-column1").style.display = "none";
+    document.querySelector(".left-column1").style.display = "none";
   }
 });
 
@@ -207,4 +206,15 @@ document.addEventListener("DOMContentLoaded", function () {
   section.addEventListener("touchstart", function () {
     caption.style.display = "block";
   });
+});
+
+const burgerMenu = document.querySelector(".burger-menu");
+const burgerContent = document.querySelector(".burger-menu-content");
+const closeIcon = document.querySelector(".close-icon");
+
+burgerMenu.addEventListener("click", function () {
+  burgerContent.classList.add("show");
+});
+closeIcon.addEventListener("click", function () {
+  burgerContent.classList.remove("show");
 });
